@@ -21,3 +21,4 @@
         return t;
     }(document, "script", "twitter-wjs"));</script>
 </svelte:head>
+<slot />

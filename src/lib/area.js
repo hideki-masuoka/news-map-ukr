@@ -1,4 +1,4 @@
-import { readable } from 'svelte';
+import { readable } from 'svelte/store';
 
 export const areaData = readable({
 	'UA-05': {

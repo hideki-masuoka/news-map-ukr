@@ -1,12 +1,11 @@
 <script>
 import {onMount,afterUpdate} from 'svelte';
-
-export let area = {};
+import { areaData } from '$lib/area.js';
 
 export let tweetdata = [];
 
 const getAreaName = (id) => {
-    return area[id].name ?? '';
+    return $areaData[id].name ?? '';
 };
 
 onMount( ()=>{
@@ -20,6 +19,8 @@ onMount( ()=>{
             }
        );
     });
+
+    console.log(tweetdata);
 });
 
 
