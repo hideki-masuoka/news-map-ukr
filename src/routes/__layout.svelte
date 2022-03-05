@@ -1,4 +1,3 @@
 <script>
-    import "virtual:windi.css";
-
+	import 'virtual:windi.css';
 </script>
