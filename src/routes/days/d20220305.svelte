@@ -1,5 +1,7 @@
 <script>
-	import EmbedTweet from '$lib/embedTweet.svelte';
+	import DaysPage from '$lib/DaysPage.svelte';
+
+	const pageTitle = '2022年3月5日';
 
 	const tweetdata = [
 		{
@@ -89,6 +91,4 @@
 	];
 </script>
 
-<main>
-	<EmbedTweet {tweetdata} />
-</main>
+<DaysPage {tweetdata} {pageTitle} />

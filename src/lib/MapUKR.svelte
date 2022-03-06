@@ -4,6 +4,9 @@
 	let currentArea;
 
 	const switchSelectedArea = (id) => {
+		if ('UA-UKR' === id) {
+			id = false;
+		}
 		if (id) {
 			let target = document.getElementById(id);
 
