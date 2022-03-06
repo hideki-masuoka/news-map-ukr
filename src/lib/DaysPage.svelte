@@ -1,13 +1,15 @@
 <script>
 	import EmbedTweet from '$lib/embedTweet.svelte';
-	import MapUKR from '$lib/MapUKR.svelte';
+import MapUKR from '$lib/MapUKR.svelte';
+import AreaInfo from '$lib/AreaInfo.svelte';
 
 	export let tweetdata = [];
 </script>
 
 <main class="days-page">
 	<section class="map-ukr">
-		<MapUKR />
+		  <MapUKR />
+      <AreaInfo />
 	</section>
 	<section class="tweet-list">
 		<EmbedTweet {tweetdata} />
