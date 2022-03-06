@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import DaysPage from '$lib/DaysPage.svelte';
+
+	const pageTitle = 'News';
+
+	const tweetdata = [
+		{
+			id: '1500370932262596610',
+			area: 'UA-14'
+		}
+	];
+</script>
+
+<DaysPage {tweetdata} {pageTitle} />

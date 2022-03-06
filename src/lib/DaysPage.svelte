@@ -3,10 +3,17 @@
 	import MapUKR from '$lib/MapUKR.svelte';
 	import AreaInfo from '$lib/AreaInfo.svelte';
 	import About from '$lib/About.svelte';
+	import { SITE_META } from '$lib/siteMeta.js';
 
 	export let tweetdata = [];
 	export let pageTitle = '';
 </script>
+
+<svelte:head>
+	<title>
+		{pageTitle}|{$SITE_META.title}
+	</title>
+</svelte:head>
 
 <main class="days-page">
 	<h1>{pageTitle}</h1>
