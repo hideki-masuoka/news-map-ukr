@@ -33,7 +33,7 @@
 </script>
 
 <section class="map-ukr">
-	<span class="selected-area">&nbsp;</span>
+	<span class="selected-area" style="display:none;">&nbsp;</span>
 	<svg
 		version="1.1"
 		id="Ukraine"
@@ -6625,7 +6625,7 @@
 		}
 	}
 	.selected-area {
-		  opacity: 0.75 !important;
-      fill: #ffff00 !important;
+		opacity: 0.75 !important;
+		fill: #ffff00 !important;
 	}
 </style>

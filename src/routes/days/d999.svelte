@@ -1,6 +1,8 @@
 <script>
 	import DaysPage from '$lib/DaysPage.svelte';
 
+	const pageTitle = '2022年3月99日';
+
 	const tweetdata = [
 		{
 			id: '1500370932262596610',
@@ -33,4 +35,4 @@
 	];
 </script>
 
-<DaysPage {tweetdata} />
+<DaysPage {tweetdata} {pageTitle} />
