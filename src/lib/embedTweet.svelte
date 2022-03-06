@@ -26,6 +26,8 @@ onMount( async ()=>{
             {
                 width: 300,
                 align: 'center',
+                cards: 'hidden',
+                conversation: 'none'
             }
        );
         isLoaded[item.id] = false;
