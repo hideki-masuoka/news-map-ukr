@@ -1,6 +1,5 @@
 <script>
-import EmbedTweet from "$lib/embedTweet.svelte";
-import MapUKR from "$lib/MapUKR.svelte";
+import DaysPage from "$lib/DaysPage.svelte";
 
 const tweetdata = [
     {
@@ -34,7 +33,4 @@ const tweetdata = [
 ];
 </script>
 
-<main>
-    <MapUKR />
-  <EmbedTweet tweetdata="{tweetdata}" />
-</main>
+<DaysPage tweetdata="{tweetdata}" />

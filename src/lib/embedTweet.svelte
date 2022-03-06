@@ -44,19 +44,20 @@ afterUpdate(()=>{
 
 
 
-<section class="embedTweets">
+<div class="embedTweets">
 {#each tweetdata as item}
     <div id="twt{item.id}" class="tweetItem">
         <strong>{getAreaName(item.area)}</strong>
+        <button class="view-area">[場所]</button>
         {#if isLoaded[item.id]}
             <div class="tweetLoading">Loading...</div>
             {/if}
     </div>
 {/each}
-</section>
+</div>
 <style >
 .embedTweets {
-    @apply container m-auto flex flex-wrap gap-4;
+    @apply container m-auto w-full flex flex-wrap gap-4;
 }
 .tweetItem {
     .tweetLoading {
