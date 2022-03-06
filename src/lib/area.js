@@ -1,4 +1,4 @@
-import { readable } from 'svelte/store';
+import { readable, writable } from 'svelte/store';
 
 export const areaData = readable({
 	'UA-05': {
@@ -142,3 +142,5 @@ export const areaData = readable({
 		sort: '100'
 	}
 });
+
+export const selectedArea = writable(false);
