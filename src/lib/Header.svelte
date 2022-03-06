@@ -1,5 +1,11 @@
 <script>
+	import { writable } from 'svelte/store';
+	import Modal, { bind } from 'svelte-simple-modal';
+	import ListMonthly from '$lib/ListMonthly.svelte';
 	import { SITE_META } from '$lib/siteMeta.js';
+
+	const modal = writable(null);
+	const openmenu = (num) => modal.set(bind(ListMonthly, { monthNum: num }));
 </script>
 
 <header class="text-gray-600 body-font">
@@ -24,8 +30,22 @@
 		<nav
 			class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center"
 		>
-			<a href="/m202202" class="mr-5 hover:text-gray-900">2022年 2月</a>
-			<a href="/m202203" class="mr-5 hover:text-gray-900">2022年 3月</a>
+			<Modal show={$modal}>
+				<button
+					on:click={() => {
+						openmenu(2);
+					}}
+					class="mr-5 hover:text-gray-900"
+				>
+					2022年2月
+				</button>
+				<button
+					on:click={() => {
+						openmenu(3);
+					}}
+					class="mr-5 hover:text-gray-900">2022年3月</button
+				>
+			</Modal>
 		</nav>
 		<a
 			class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
