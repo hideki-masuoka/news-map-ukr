@@ -1,5 +1,8 @@
 <script>
-	import 'virtual:windi.css';
+import 'virtual:windi.css';
+import Header from '$lib/Header.svelte';
+import Footer from '$lib/Footer.svelte';
+
 </script>
 
 <svelte:head>
@@ -23,4 +26,9 @@
 		})(document, 'script', 'twitter-wjs');
 	</script>
 </svelte:head>
+<Header />
+
 <slot />
+
+<Footer />
+
