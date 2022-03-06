@@ -6627,7 +6627,7 @@
 			@apply w-full h-auto;
 		}
 	}
-	.selected-area {
+	:global(.selected-area) {
 		opacity: 0.75 !important;
 		fill: #ffff00 !important;
 	}

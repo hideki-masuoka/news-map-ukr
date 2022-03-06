@@ -1,4 +1,5 @@
 <script>
+	import { DateTime } from 'luxon';
 	import EmbedTweet from '$lib/embedTweet.svelte';
 	import MapUKR from '$lib/MapUKR.svelte';
 	import AreaInfo from '$lib/AreaInfo.svelte';
@@ -7,6 +8,11 @@
 
 	export let tweetdata = [];
 	export let pageTitle = '';
+
+	const TimeJP = DateTime.now().reconfigure({ locale: 'jp', outputCalendar: 'japanese' });
+	const TimeUA = DateTime.now()
+		.reconfigure({ locale: 'jp', outputCalendar: 'japanese' })
+		.setZone('EET');
 </script>
 
 <svelte:head>
@@ -17,6 +23,11 @@
 
 <main class="days-page">
 	<h1>{pageTitle}</h1>
+	<div class="clock">
+		現在時刻 ■日本時間【{TimeJP.toFormat("LLL'月'dd'日' HH:mm")}】 ■現地時間【{TimeUA.toFormat(
+			"LLL'月'dd'日' HH:mm"
+		)}】
+	</div>
 	<section class="map-ukr">
 		<MapUKR />
 		<AreaInfo />
@@ -30,7 +41,7 @@
 <style>
 	.days-page {
 		grid-template-areas:
-			'blank title'
+			'clock title'
 			'map tweet';
 
 		@apply container m-auto px-5 grid gap-x-5 gap-y-1;
@@ -39,6 +50,9 @@
 			grid-area: title;
 			@apply font-bold text-2xl;
 		}
+	}
+	.clock {
+		grid-area: clock;
 	}
 	.map-ukr {
 		grid-area: map;
