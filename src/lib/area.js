@@ -135,5 +135,10 @@ export const areaData = readable({
 		id: 'UA-40',
 		name: 'セヴァストポリ市',
 		sort: '998'
+	},
+	'UA-UKR': {
+		id: 'UA-UKR',
+		name: 'ウクライナ',
+		sort: '100'
 	}
 });

@@ -5,12 +5,18 @@ import { areaData } from '$lib/area.js';
 export let tweetdata = [];
 
 const getAreaName = (id) => {
-    return $areaData[id].name ?? '';
+    if(
+        ($areaData[id] ?? false)
+        && ($areaData[id].name ?? false)
+    ) {
+        return $areaData[id].name;
+    }
+    return '';
 };
 
-onMount( ()=>{
-    tweetdata.forEach((item)=>{
-       twttr.widgets.createTweet(
+onMount( async ()=>{
+    tweetdata.forEach( async(item)=>{
+       await twttr.widgets.createTweet(
             item.id,
             document.getElementById('twt' + item.id),
             {
@@ -20,7 +26,6 @@ onMount( ()=>{
        );
     });
 
-    console.log(tweetdata);
 });
 
 
