@@ -16,7 +16,10 @@
 		<li>
 			<a href="/days/d20220305">05日</a>
 		</li>
-	</ul>
+		<li>
+			<a href="/days/d20220306">06日</a>
+		</li>
+</ul>
 {:else}
 	<p>Not Found</p>
 {/if}
