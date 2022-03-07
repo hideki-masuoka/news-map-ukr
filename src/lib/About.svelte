@@ -4,11 +4,11 @@
 		これはウクライナのニュースを読むときに、どの地域のことを指しているのかが分かるようにしたものです。
 	</p>
 	<p>ニュース・ソースはTwitter、地図はWikipediaをそれぞれ参照し、手動で追加しています。</p>
-	<hr>
+	<hr />
 	<p class="text-sm text-right">
-	※さらに詳細を知るには、
-	<a href="https://liveuamap.com" target="_blank" rel="noopener">Live Universal Awareness Map</a>
-	をチェックしてみてください。
+		※さらに詳細を知るには、
+		<a href="https://liveuamap.com" target="_blank" rel="noopener">Live Universal Awareness Map</a>
+		をチェックしてみてください。
 	</p>
 </div>
 
@@ -20,14 +20,14 @@
 			@apply text-xl font-bold;
 		}
 		hr {
-		  @apply my-2;
+			@apply my-2;
 		}
 		a {
-		  color: #0000ff;
-		  @apply font-bold;
-		  &:hover {
-		    opacity: 0.75;
-		    }
+			color: #0000ff;
+			@apply font-bold;
+			&:hover {
+				opacity: 0.75;
+			}
 		}
 	}
 </style>
