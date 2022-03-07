@@ -13,7 +13,7 @@
 		return '';
 	};
 
-	onMount(async () => {
+	onMount(() => {
 		tweetdata.forEach(async (item) => {
 			let target = document.getElementById('twt' + item.id);
 			isLoaded[item.id] = true;
