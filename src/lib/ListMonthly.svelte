@@ -5,19 +5,19 @@
 {#if 2 === monthNum}
 	<strong>2022年2月</strong>
 	<ul class="monthly">
-		<li><a href="/days/d20220228">28日</a></li>
+		<li><a href="/days/d20220228.html">28日</a></li>
 	</ul>
 {:else if 3 === monthNum}
 	<strong>2022年3月</strong>
 	<ul class="monthly">
 		<li>
-			<a href="/days/d20220304">04日</a>
+			<a href="/days/d20220304.html">04日</a>
 		</li>
 		<li>
-			<a href="/days/d20220305">05日</a>
+			<a href="/days/d20220305.html">05日</a>
 		</li>
 		<li>
-			<a href="/days/d20220306">06日</a>
+			<a href="/days/d20220306.html">06日</a>
 		</li>
 	</ul>
 {:else}
