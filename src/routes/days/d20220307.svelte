@@ -276,4 +276,4 @@
 	];
 </script>
 
-<DaysPage {tweetdata} {pageTitle} embed="{false}" />
+<DaysPage {tweetdata} {pageTitle} embed={false} />

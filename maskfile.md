@@ -12,21 +12,25 @@ echo -e "\n" >>tweet.js
 ```
 
 ## deploy
-~~~sh
+
+```sh
 firebase deploy
-~~~
+```
 
 ## build
-~~~sh
+
+```sh
 pnpm build
-~~~
+```
 
 ## start
-~~~sh
+
+```sh
 pnpm dev
-~~~
+```
 
 ## format
-~~~sh
+
+```sh
 pnpm format
-~~~
+```
