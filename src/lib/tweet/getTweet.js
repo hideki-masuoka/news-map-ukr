@@ -1,14 +1,14 @@
 import alltweet from '$lib/json/tweet.json';
-import details from '$lib/json/oembed.json';
+//import details from '$lib/json/oembed.json';
 
-export const getFromDate = (date) => {
+export const getFromDate = (date, data) => {
 	let arr = [];
 	Object.entries(alltweet).forEach(([k, obj]) => {
 		if (date === obj.date) {
 			arr.push({
 				id: k,
 				area: obj.area,
-				embed: details[k] ?? {}
+				embed: data[k] ?? {}
 			});
 		}
 	});
