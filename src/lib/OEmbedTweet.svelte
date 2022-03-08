@@ -58,10 +58,9 @@
 
 <style>
 	.embedTweets {
-		@apply container m-auto w-full flex flex-wrap gap-4 justify-evenly;
+		@apply container m-auto w-full pr-4;
 	}
 	.tweetItem {
-		max-width: 45%;
 		@apply flex-grow flex-shrink;
 
 		.tweetLoading {
@@ -87,10 +86,10 @@
 	.tweet-content {
 		border: 1px solid #ccc;
 		border-radius: 0.5em;
-		@apply m-auto py-4;
+		@apply m-auto pb-4 mb-4 ml-4;
 	}
 	:global(.twitter-tweet-noembed) {
-		@apply text-right font-bold text-sm mx-4 flex flex-wrap flex-col;
+		@apply text-right font-bold text-sm mx-4 mb-0 flex flex-wrap flex-col;
 
 		:global(a) {
 			color: blue;
