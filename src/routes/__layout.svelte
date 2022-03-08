@@ -9,3 +9,9 @@
 <slot />
 
 <Footer />
+
+<style>
+	:global(a:hover) {
+		opacity: 0.75;
+	}
+</style>

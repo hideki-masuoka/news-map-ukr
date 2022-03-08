@@ -1,5 +1,6 @@
 <script>
 	import { DateTime } from 'luxon';
+	import OEmbedTweet from '$lib/OEmbedTweet.svelte';
 	import EmbedTweet from '$lib/embedTweet.svelte';
 	import MapUKR from '$lib/MapUKR.svelte';
 	import AreaInfo from '$lib/AreaInfo.svelte';
@@ -8,6 +9,7 @@
 
 	export let tweetdata = [];
 	export let pageTitle = '';
+	export let embed = true;
 
 	const TimeJP = DateTime.now().reconfigure({ locale: 'jp', outputCalendar: 'japanese' });
 	const TimeUA = DateTime.now()
@@ -53,7 +55,11 @@
 		<About />
 	</section>
 	<section class="tweet-list">
-		<EmbedTweet {tweetdata} />
+		{#if embed}
+			<EmbedTweet {tweetdata} />
+		{:else}
+			<OEmbedTweet {tweetdata} />
+		{/if}
 	</section>
 </main>
 
