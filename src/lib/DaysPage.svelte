@@ -1,7 +1,7 @@
 <script>
 	import { DateTime } from 'luxon';
-	import OEmbedTweet from '$lib/OEmbedTweet.svelte';
-	import EmbedTweet from '$lib/embedTweet.svelte';
+	import OEmbedTweet from '$lib/tweet/OEmbedTweet.svelte';
+	import EmbedTweet from '$lib/tweet/embedTweet.svelte';
 	import MapUKR from '$lib/MapUKR.svelte';
 	import AreaInfo from '$lib/AreaInfo.svelte';
 	import About from '$lib/About.svelte';
