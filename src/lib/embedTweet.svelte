@@ -18,7 +18,7 @@
 			let target = document.getElementById('twt' + item.id);
 			isLoaded[item.id] = true;
 			await twttr.widgets.createTweet(item.id, target, {
-				width: 300,
+				width: 280,
 				align: 'center',
 				cards: 'hidden',
 				conversation: 'none'
