@@ -1,7 +1,5 @@
 <script>
-	import { areaData, selectedArea } from '$lib/area.js';
-
-	let currentArea;
+	import { selectedArea } from '$lib/area.js';
 
 	const switchSelectedArea = (id) => {
 		if ('UA-UKR' === id) {
@@ -10,7 +8,7 @@
 		if (id) {
 			let target = document.getElementById(id);
 
-			let ret = target.classList.toggle('selected-area');
+			target.classList.toggle('selected-area');
 			return true;
 		}
 		return false;
@@ -23,7 +21,7 @@
 		let uaMap = document.getElementById('overlay');
 		if (uaMap) {
 			let pathList = uaMap.getElementsByTagName('path');
-			Object.entries(pathList).forEach(([k, element]) => {
+			Object.entries(pathList).forEach(([, element]) => {
 				element.classList.remove('selected-area');
 			});
 		}
@@ -6619,7 +6617,7 @@
 	</svg>
 </section>
 
-<style>
+<style lang="windicss">
 	.map-ukr {
 		@apply container m-auto;
 

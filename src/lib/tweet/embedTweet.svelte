@@ -17,7 +17,7 @@
 		tweetdata.forEach(async (item) => {
 			let target = document.getElementById('twt' + item.id);
 			isLoaded[item.id] = true;
-			await twttr.widgets.createTweet(item.id, target, {
+			await window.twttr.widgets.createTweet(item.id, target, {
 				width: 280,
 				align: 'center',
 				cards: 'hidden',
@@ -56,7 +56,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="windicss">
 	.embedTweets {
 		@apply container m-auto w-full flex flex-wrap gap-4;
 	}

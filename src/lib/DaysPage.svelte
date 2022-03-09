@@ -67,7 +67,7 @@
 	</section>
 </main>
 
-<style>
+<style lang="windicss">
 	.days-page {
 		grid-template-areas:
 			'clock map'
