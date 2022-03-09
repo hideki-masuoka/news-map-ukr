@@ -1,5 +1,5 @@
 <?php
-$outputfilename = __DIR__ . '/oembed';
+$outputfilename = dirname(__FILE__, 2) . '/src/lib/json/daily/oembed';
 $inputJsonFile = dirname(__FILE__, 2) . '/src/lib/json/tweet.json';
 $targetDate = "20220309";
 
