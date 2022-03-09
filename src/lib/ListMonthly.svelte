@@ -11,6 +11,15 @@
 	<strong>2022年3月</strong>
 	<ul class="monthly">
 		<li>
+			<a href="/days/d20220301.html">01日</a>
+		</li>
+		<li>
+			<a href="/days/d20220302.html">02日</a>
+		</li>
+		<li>
+			<a href="/days/d20220303.html">03日</a>
+		</li>
+		<li>
 			<a href="/days/d20220304.html">04日</a>
 		</li>
 		<li>
@@ -21,6 +30,9 @@
 		</li>
 		<li>
 			<a href="/days/d20220307.html">07日</a>
+		</li>
+		<li>
+			<a href="/days/d20220308.html">08日</a>
 		</li>
 	</ul>
 {:else}

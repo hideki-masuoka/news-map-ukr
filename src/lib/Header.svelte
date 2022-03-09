@@ -8,9 +8,9 @@
 	const openmenu = (num) => modal.set(bind(ListMonthly, { monthNum: num }));
 </script>
 
-<header class="text-gray-600 body-font">
-	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-		<a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+<header class="site-header">
+	<div class="header-contents">
+		<a href="/" class="header-title">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="currentColor"
@@ -27,9 +27,7 @@
 			>
 			<span class="ml-3 text-xl">{$SITE_META.title}</span>
 		</a>
-		<nav
-			class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center"
-		>
+		<nav class="header-nav">
 			<Modal show={$modal}>
 				<button
 					on:click={() => {
@@ -48,7 +46,7 @@
 			</Modal>
 		</nav>
 		<a
-			class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+			class="header-external-link"
 			href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E3%81%AE%E5%9C%B0%E6%96%B9%E8%A1%8C%E6%94%BF%E5%8C%BA%E7%94%BB"
 			title="ウクライナの地方行政区画 - Wikipedia"
 			target="_blank"
@@ -69,3 +67,25 @@
 		</a>
 	</div>
 </header>
+
+<style>
+	.site-header {
+		@apply text-gray-600 body-font;
+
+		.header-contents {
+			@apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;
+		}
+
+		.header-title {
+			@apply flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0;
+		}
+
+		.header-nav {
+			@apply md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center;
+		}
+
+		.header-external-link {
+			@apply inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-2 md:mt-0;
+		}
+	}
+</style>
