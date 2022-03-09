@@ -180,5 +180,44 @@
 		"provider_name": "Twitter",
 		"provider_url": "https://twitter.com",
 		"version": "1.0"
+	},
+	"1501428545410768899": {
+		"url": "https://twitter.com/ReutersJapan/status/1501428545410768899",
+		"author_name": "\u30ed\u30a4\u30bf\u30fc",
+		"author_url": "https://twitter.com/ReutersJapan",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"ja\" dir=\"ltr\">\u30a6\u30af\u30e9\u30a4\u30ca5\u90fd\u5e02\u304b\u3089\u5e02\u6c11\u907f\u96e3\u3078\u3001\u30ed\u30b7\u30a2\u8ecd\u304c\u300c\u6c88\u9ed9\u300d\u7d04\u675f <a href=\"https://t.co/70DiBj6V1b\">https://t.co/70DiBj6V1b</a></p>&mdash; \u30ed\u30a4\u30bf\u30fc (@ReutersJapan) <a href=\"https://twitter.com/ReutersJapan/status/1501428545410768899?ref_src=twsrc%5Etfw\">March 9, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
+	},
+	"1501437880228618241": {
+		"url": "https://twitter.com/afpbbcom/status/1501437880228618241",
+		"author_name": "AFPBB News",
+		"author_url": "https://twitter.com/afpbbcom",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"ja\" dir=\"ltr\">\u30a6\u30af\u30e9\u30a4\u30ca\u5927\u7d71\u9818\u3001NATO\u52a0\u76df\u65ad\u5ff5<a href=\"https://t.co/hgGpjkozSQ\">https://t.co/hgGpjkozSQ</a></p>&mdash; AFPBB News (@afpbbcom) <a href=\"https://twitter.com/afpbbcom/status/1501437880228618241?ref_src=twsrc%5Etfw\">March 9, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
+	},
+	"1501442140441923588": {
+		"url": "https://twitter.com/ReutersJapan/status/1501442140441923588",
+		"author_name": "\u30ed\u30a4\u30bf\u30fc",
+		"author_url": "https://twitter.com/ReutersJapan",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"ja\" dir=\"ltr\">\u30a6\u30af\u30e9\u30a4\u30ca\u30fb\u30b9\u30e0\u30a4\u306e\u6c11\u9593\u4eba\u9000\u907f\u30019\u65e5\u3082\u7d99\u7d9a\u3078\uff1d\u5730\u5143\u5f53\u5c40\u8005 <a href=\"https://t.co/3615TswbIU\">https://t.co/3615TswbIU</a></p>&mdash; \u30ed\u30a4\u30bf\u30fc (@ReutersJapan) <a href=\"https://twitter.com/ReutersJapan/status/1501442140441923588?ref_src=twsrc%5Etfw\">March 9, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
 	}
 }

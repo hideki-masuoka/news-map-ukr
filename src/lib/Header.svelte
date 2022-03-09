@@ -27,9 +27,7 @@
 			>
 			<span class="ml-3 text-xl">{$SITE_META.title}</span>
 		</a>
-		<nav
-			class="header-nav"
-		>
+		<nav class="header-nav">
 			<Modal show={$modal}>
 				<button
 					on:click={() => {
@@ -71,23 +69,23 @@
 </header>
 
 <style>
-.site-header {
-    @apply text-gray-600 body-font;
+	.site-header {
+		@apply text-gray-600 body-font;
 
-    .header-contents {
-        @apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;
-    }
+		.header-contents {
+			@apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;
+		}
 
-    .header-title {
-        @apply flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0;
-    }
+		.header-title {
+			@apply flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0;
+		}
 
-    .header-nav {
-        @apply md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center;
-    }
+		.header-nav {
+			@apply md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center;
+		}
 
-    .header-external-link {
-        @apply inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-2 md:mt-0;
-    }
-}
+		.header-external-link {
+			@apply inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-2 md:mt-0;
+		}
+	}
 </style>

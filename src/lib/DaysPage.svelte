@@ -45,9 +45,9 @@
 <main class="days-page">
 	<h1>{pageTitle}</h1>
 	<div class="clock">
-		  現在時刻
-      <span>■日本時間【{TimeJP.toFormat("LLL'月'dd'日' HH:mm")}】</span>
-      <span>■現地時間【{TimeUA.toFormat("LLL'月'dd'日' HH:mm")}】</span>
+		現在時刻
+		<span>■日本時間【{TimeJP.toFormat("LLL'月'dd'日' HH:mm")}】</span>
+		<span>■現地時間【{TimeUA.toFormat("LLL'月'dd'日' HH:mm")}】</span>
 	</div>
 	<section class="map-ukr">
 		<MapUKR />
@@ -60,61 +60,61 @@
 			<OEmbedTweet {tweetdata} />
 		{/if}
 	</section>
-  <section class="site-about">
-		  <About />
-  </section>
+	<section class="site-about">
+		<About />
+	</section>
 </main>
 
 <style>
-.days-page {
+	.days-page {
 		grid-template-areas:
-			  'clock map'
-        'title map'
-			  'tweet tweet'
-        'about about';
+			'clock map'
+			'title map'
+			'tweet tweet'
+			'about about';
 
-    @screen md {
-		    grid-template-areas:
-			      'clock title'
-			      'map tweet'
-            'about tweet';
-    }
+		@screen md {
+			grid-template-areas:
+				'clock title'
+				'map tweet'
+				'about tweet';
+		}
 
 		@apply container m-auto px-5 grid gap-x-5 gap-y-1;
 
 		h1 {
-			  grid-area: title;
-        @apply font-bold text-base;
-        @screen md {
-			      @apply text-2xl;
-        }
+			grid-area: title;
+			@apply font-bold text-base;
+			@screen md {
+				@apply text-2xl;
+			}
 		}
-}
-.clock {
+	}
+	.clock {
 		grid-area: clock;
-    @apply text-xs;
+		@apply text-xs;
 
-    @screen md {
-        @apply text-base;
-    }
+		@screen md {
+			@apply text-base;
+		}
 
-    span {
-        @apply block md:inline;
-    }
-}
+		span {
+			@apply block md:inline;
+		}
+	}
 	.map-ukr {
 		grid-area: map;
 	}
 	.tweet-list {
 		grid-area: tweet;
 		max-height: 50vh;
-		  @apply overflow-y-scroll;
+		@apply overflow-y-scroll;
 
-      @screen md {
-          max-height: 80vh;
-      }
+		@screen md {
+			max-height: 80vh;
+		}
 	}
-.site-about {
-    grid-area: about;
-}
+	.site-about {
+		grid-area: about;
+	}
 </style>

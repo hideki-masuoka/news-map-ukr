@@ -24,11 +24,11 @@
 </div>
 
 <style>
-.area-info {
-    @apply hidden;
-    @screen md {
-        @apply flex;
-    }
+	.area-info {
+		@apply hidden;
+		@screen md {
+			@apply flex;
+		}
 		@apply mt-4 flex-wrap gap-x-4 gap-y-1 justify-between;
 
 		svg {
