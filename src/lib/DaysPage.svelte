@@ -54,7 +54,9 @@
 		<AreaInfo />
 	</section>
 	<section class="tweet-list">
-		{#if embed}
+		{#if 'Glossary' === embed}
+			<slot name="glossaly" />
+		{:else if true === embed}
 			<EmbedTweet {tweetdata} />
 		{:else}
 			<OEmbedTweet {tweetdata} />
