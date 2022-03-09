@@ -1,6 +1,6 @@
 # news-map-ukr
 
-## make:json (ID)
+## make:json:curl (ID)
 
 ```sh
 echo -e "\n" >> tweet.js
@@ -9,6 +9,12 @@ curl "https://publish.twitter.com/oembed?maxwidth=280&hide_thread=t&omit_script=
 echo -e "\n" >>tweet.js
 echo '},' >>tweet.js
 echo -e "\n" >>tweet.js
+```
+
+## make:json
+
+```sh
+php ./php/getTwitterOEmbed.php
 ```
 
 ## deploy
@@ -25,7 +31,7 @@ pnpm build
 
 ## start
 
-```sh
+```bash
 pnpm dev
 ```
 

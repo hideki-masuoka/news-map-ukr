@@ -1,7 +1,7 @@
 <?php
-$outputfilename = 'oembed';
-$inputJsonFile = '../src/lib/json/tweet.json';
-$targetDate = "20220228";
+$outputfilename = __DIR__ . '/oembed';
+$inputJsonFile = dirname(__FILE__, 2) . '/src/lib/json/tweet.json';
+$targetDate = "20220309";
 
 $targetjson = file_get_contents($inputJsonFile);
 $tweetdata = json_decode($targetjson, true);
