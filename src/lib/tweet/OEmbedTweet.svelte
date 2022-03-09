@@ -56,7 +56,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="windicss">
 	.embedTweets {
 		@apply container m-auto w-full pr-4;
 	}

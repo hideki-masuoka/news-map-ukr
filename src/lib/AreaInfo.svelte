@@ -23,7 +23,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="windicss">
 	.area-info {
 		@apply hidden;
 		@screen md {

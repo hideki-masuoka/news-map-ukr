@@ -15,6 +15,7 @@ const config = {
 			default: true,
 			enabled: true
 		},
+		trailingSlash: 'always',
 		vite: {
 			plugins: [WindiCSS()]
 		}

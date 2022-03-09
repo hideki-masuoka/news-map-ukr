@@ -1,45 +1,29 @@
 <script>
 	export let monthNum = 2;
+	const toDayStr = (num) => {
+		return String(num + 1).padStart(2, '0');
+	};
 </script>
 
 {#if 2 === monthNum}
 	<strong>2022年2月</strong>
 	<ul class="monthly">
-		<li><a href="/days/d20220228.html">28日</a></li>
+		<li><a href="/days/d20220228/">28日</a></li>
 	</ul>
 {:else if 3 === monthNum}
 	<strong>2022年3月</strong>
 	<ul class="monthly">
-		<li>
-			<a href="/days/d20220301.html">01日</a>
-		</li>
-		<li>
-			<a href="/days/d20220302.html">02日</a>
-		</li>
-		<li>
-			<a href="/days/d20220303.html">03日</a>
-		</li>
-		<li>
-			<a href="/days/d20220304.html">04日</a>
-		</li>
-		<li>
-			<a href="/days/d20220305.html">05日</a>
-		</li>
-		<li>
-			<a href="/days/d20220306.html">06日</a>
-		</li>
-		<li>
-			<a href="/days/d20220307.html">07日</a>
-		</li>
-		<li>
-			<a href="/days/d20220308.html">08日</a>
-		</li>
+		{#each [...Array(9).keys()] as dayNum}
+			<li>
+				<a href="/days/d202203{toDayStr(dayNum)}/">{toDayStr(dayNum)}日</a>
+			</li>
+		{/each}
 	</ul>
 {:else}
 	<p>Not Found</p>
 {/if}
 
-<style>
+<style lang="windicss">
 	.monthly {
 		@apply flex flex-wrap justify-evenly;
 

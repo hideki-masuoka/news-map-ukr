@@ -12,7 +12,7 @@
 	</p>
 </div>
 
-<style>
+<style lang="windicss">
 	.about-text {
 		@apply mt-4;
 

@@ -97,7 +97,7 @@
 	</svelte:fragment>
 </DaysPage>
 
-<style>
+<style lang="windicss">
 	.glossary-wrap {
 		@apply container m-auto w-full pr-4;
 	}
