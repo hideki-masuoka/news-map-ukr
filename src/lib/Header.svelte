@@ -42,8 +42,8 @@
 						openmenu(3);
 					}}
 					class="mr-5 hover:text-gray-900">2022年3月</button
-				                                            >
-        <a class="mr-5 hover:text-gray-900" href="/glossary.html">用語集</a>
+				>
+				<a class="mr-5 hover:text-gray-900" href="/glossary.html">用語集</a>
 			</Modal>
 		</nav>
 		<a
