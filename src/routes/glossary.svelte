@@ -28,6 +28,17 @@
 			area: 'UA-32',
 			description: 'キーウ州のイルピニ川沿いに位置する都市'
 		},
+		'Bucha,_Kyiv_Oblast': {
+			title: 'ブチャ',
+			area: 'UA-32',
+			description: 'キエフ州にある都市'
+		},
+		Enerhodar: {
+			title: 'エネルホダル',
+			area: 'UA-23',
+			description: 'ザポリージャ州の北西部にある都市'
+		},
+
 		'%E3%83%9B%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A1%E3%83%AA%E7%A9%BA%E6%B8%AF': {
 			title: 'ホストーメリ空港(アントノフ国際空港)',
 			area: 'UA-32',
