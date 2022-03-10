@@ -27,6 +27,7 @@ firebase deploy
 
 ```sh
 pnpm build
+pnpm exec svelte-sitemap --domain https://news-map-ukr.web.app
 ```
 
 ## start
@@ -40,3 +41,8 @@ pnpm dev
 ```sh
 pnpm format
 ```
+
+## postbuild
+~~~sh
+pnpm exec svelte-sitemap --domain https://news-map-ukr.web.app
+~~~
