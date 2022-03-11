@@ -1,6 +1,6 @@
 <script>
 	import { onMount, afterUpdate } from 'svelte';
-	import { areaData, selectedArea } from '$lib/area.js';
+	import { areaData, selectedArea, currentTweetId } from '$lib/area.js';
 
 	export let tweetdata = [];
 
@@ -27,6 +27,7 @@
 				class="view-area"
 				on:click={() => {
 					$selectedArea = item.area;
+					$currentTweetId = item.id;
 				}}
 			>
 				<strong>{getAreaName(item.area)}</strong>

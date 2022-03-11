@@ -1,5 +1,6 @@
 <script>
-	import { selectedArea } from '$lib/area.js';
+	import { selectedArea, currentTweetId } from '$lib/area.js';
+	import groupedArea from '$lib/json/groupedArea.json';
 
 	const switchSelectedArea = (id) => {
 		if ('UA-UKR' === id) {
@@ -12,6 +13,18 @@
 			return true;
 		}
 		return false;
+	};
+
+	const switchSelectedAreas = (id, tweetId) => {
+		let areaIds = [];
+		if ((groupedArea[tweetId] ?? false) && Array.isArray(groupedArea[tweetId])) {
+			areaIds = groupedArea[tweetId];
+		} else {
+			areaIds.push(id);
+		}
+		areaIds.forEach((val) => {
+			switchSelectedArea(val);
+		});
 	};
 
 	const clearSelectedArea = () => {
@@ -29,7 +42,8 @@
 
 	$: {
 		clearSelectedArea();
-		switchSelectedArea($selectedArea);
+		switchSelectedAreas($selectedArea, $currentTweetId);
+		$currentTweetId = null;
 	}
 </script>
 

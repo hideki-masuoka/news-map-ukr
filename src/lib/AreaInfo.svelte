@@ -1,8 +1,9 @@
 <script>
-	import { areaData, selectedArea } from '$lib/area.js';
+	import { areaData, selectedArea, currentTweetId } from '$lib/area.js';
 
 	const areaSelect = (id) => {
 		$selectedArea = id;
+		$currentTweetId = 'group-donbas' === id ? id : null;
 	};
 </script>
 

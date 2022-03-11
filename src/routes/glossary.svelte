@@ -1,6 +1,6 @@
 <script>
 	import DaysPage from '$lib/DaysPage.svelte';
-	import { areaData, selectedArea } from '$lib/area.js';
+	import { areaData, selectedArea, currentTweetId } from '$lib/area.js';
 
 	const pageTitle = '用語集';
 
@@ -22,6 +22,12 @@
 			title: 'マリウポリ',
 			area: 'UA-14',
 			description: 'ウクライナ東部のドネツィク州にある都市'
+		},
+		'%E3%83%89%E3%83%B3%E3%83%90%E3%82%B9': {
+			title: 'ドンバス地方',
+			area: 'group-donbas',
+			group: 'group-donbas',
+			description: '今日用いられる最も一般的な定義はウクライナのドネツィク州とルハーンシク州を指す'
 		},
 		'%E3%82%A4%E3%83%AB%E3%83%94%E3%83%B3': {
 			title: 'イルピン',
@@ -76,6 +82,7 @@
 						class="view-area"
 						on:click={() => {
 							$selectedArea = item.area;
+							$currentTweetId = item.group ?? null;
 						}}
 					>
 						<strong>{getAreaName(item.area)}</strong>
