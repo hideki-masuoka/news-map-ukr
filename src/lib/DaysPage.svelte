@@ -2,7 +2,7 @@
 	import { DateTime } from 'luxon';
 	import OEmbedTweet from '$lib/tweet/OEmbedTweet.svelte';
 	import EmbedTweet from '$lib/tweet/embedTweet.svelte';
-	import MapUKR from '$lib/MapUKR.svelte';
+	import MapUKR from '$lib/map/MapUKR.svelte';
 	import AreaInfo from '$lib/AreaInfo.svelte';
 	import About from '$lib/About.svelte';
 	import { SITE_META } from '$lib/siteMeta.js';
