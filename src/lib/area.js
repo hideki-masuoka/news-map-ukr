@@ -128,6 +128,11 @@ export const areaData = readable({
 		name: 'キエフ市',
 		sort: '0'
 	},
+	'dnipro-ua': {
+		id: 'dnipro-ua',
+		name: 'ドニエプル川',
+		sort: '800'
+	},
 	'group-donbas': {
 		id: 'group-donbas',
 		name: 'ドンバス地方',
