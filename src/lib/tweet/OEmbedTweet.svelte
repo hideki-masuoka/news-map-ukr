@@ -48,7 +48,13 @@
 				<div class="tweetLoading">Loading...</div>
 			{/if}
 			<div class="tweet-content">
-				{@html item.embed.html.replace('twitter-tweet', 'twitter-tweet-noembed')}
+				{#if item.embed.html ?? false}
+					{@html item.embed.html.replace('twitter-tweet', 'twitter-tweet-noembed')}
+				{:else}
+					<div class="twitter-tweet-noembed">
+						<p>not found</p>
+					</div>
+				{/if}
 				<div class="tweet-hr">
 					<svg width="24" height="24" viewBox="0 0 24 24"
 						><path
