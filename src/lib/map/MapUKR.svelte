@@ -17,7 +17,9 @@
 		if (id) {
 			let target = document.getElementById(id);
 
-			target.classList.toggle('selected-area');
+			if (target.classList) {
+				target.classList.toggle('selected-area');
+			}
 			return true;
 		}
 		return false;
