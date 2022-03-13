@@ -8,6 +8,9 @@
 {#if 2 === monthNum}
 	<strong>2022年2月</strong>
 	<ul class="monthly">
+		<li><a href="/days/d20220224/">24日</a></li>
+		<li><a href="/days/d20220225/">25日</a></li>
+		<li><a href="/days/d20220226/">26日</a></li>
 		<li><a href="/days/d20220227/">27日</a></li>
 		<li><a href="/days/d20220228/">28日</a></li>
 	</ul>
