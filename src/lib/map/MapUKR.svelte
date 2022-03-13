@@ -45,7 +45,9 @@
 		if (uaMap) {
 			let pathList = uaMap.getElementsByTagName('path');
 			Object.entries(pathList).forEach(([, element]) => {
-				element.classList.remove('selected-area');
+				if (element.classList) {
+					element.classList.remove('selected-area');
+				}
 			});
 		}
 	};

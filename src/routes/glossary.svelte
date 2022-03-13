@@ -12,9 +12,10 @@
 	};
 
 	const URL_ROOT = 'https://ja.wikipedia.org/wiki/';
+	const URL_ROOT_EN = 'https://en.wikipedia.org/wiki/';
 
-	const getWikipediaURL = (id) => {
-		return URL_ROOT + id;
+	const getWikipediaURL = (id, lang) => {
+		return 'en' === lang ? URL_ROOT_EN + id : URL_ROOT + id;
 	};
 
 	const items = {
@@ -22,7 +23,8 @@
 			title: 'メリトポリ',
 			area: 'UA-23',
 			description:
-				'ウクライナ南東部のザポリージャ州にある都市／この都市は「クリミアへの玄関口」と呼ばれ、2014年にロシアがクリミアを占領する前は、半島に向かう旅客列車の80％が都市を通過し、夏の間、道路交通は1日あたり45,000台に達しました'
+				'ウクライナ南東部のザポリージャ州にある都市／この都市は「クリミアへの玄関口」と呼ばれ、2014年にロシアがクリミアを占領する前は、半島に向かう旅客列車の80％が都市を通過し、夏の間、道路交通は1日あたり45,000台に達しました',
+			lang: 'en'
 		},
 		'%E3%83%9E%E3%83%AA%E3%82%A6%E3%83%9D%E3%83%AA': {
 			title: 'マリウポリ',
@@ -49,12 +51,14 @@
 		'Bucha,_Kyiv_Oblast': {
 			title: 'ブチャ',
 			area: 'UA-32',
-			description: 'キエフ州にある都市'
+			description: 'キエフ州にある都市',
+			lang: 'en'
 		},
 		Enerhodar: {
 			title: 'エネルホダル',
 			area: 'UA-23',
-			description: 'ザポリージャ州の北西部にある都市'
+			description: 'ザポリージャ州の北西部にある都市',
+			lang: 'en'
 		},
 
 		'%E3%83%9B%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A1%E3%83%AA%E7%A9%BA%E6%B8%AF': {
@@ -109,7 +113,9 @@
 						<dt class="glossary-title">{item.title}</dt>
 						<dd class="glossary-text">{item.description}</dd>
 						<dd class="glossary-link">
-							<a href={getWikipediaURL(key)} target="_blank" rel="noopener">Wikipediaで表示</a>
+							<a href={getWikipediaURL(key, item.lang ?? 'jp')} target="_blank" rel="noopener"
+								>Wikipediaで表示</a
+							>
 						</dd>
 						<dd class="glossary-hr">
 							<svg width="24" height="24" viewBox="0 0 24 24">
