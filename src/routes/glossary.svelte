@@ -31,6 +31,12 @@
 			area: 'UA-14',
 			description: 'ウクライナ東部のドネツィク州にある都市'
 		},
+		Sievierodonetsk: {
+			title: 'セベロドネツク',
+			area: 'UA-09',
+			description: 'ルハーンシク州の都市',
+			lang: 'en'
+		},
 		'%E3%83%89%E3%83%B3%E3%83%90%E3%82%B9': {
 			title: 'ドンバス地方',
 			area: 'group-donbas',
