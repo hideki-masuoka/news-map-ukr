@@ -83,7 +83,7 @@
 
 <style lang="windicss">
 	.map-ukr {
-		grid-template-area: 'map';
+		grid-template-areas: 'map';
 		@apply container grid m-auto;
 
 		svg {
