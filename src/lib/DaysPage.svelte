@@ -1,4 +1,6 @@
 <script>
+	import { page } from '$app/stores';
+	import { assets } from '$app/paths';
 	import { DateTime } from 'luxon';
 	import OEmbedTweet from '$lib/tweet/OEmbedTweet.svelte';
 	import EmbedTweet from '$lib/tweet/embedTweet.svelte';
@@ -6,6 +8,8 @@
 	import AreaInfo from '$lib/AreaInfo.svelte';
 	import About from '$lib/About.svelte';
 	import { SITE_META } from '$lib/siteMeta.js';
+
+	import { MetaTags } from 'svelte-meta-tags';
 
 	export let tweetdata = [];
 	export let pageTitle = '';
@@ -16,6 +20,32 @@
 		.reconfigure({ locale: 'jp', outputCalendar: 'japanese' })
 		.setZone('EET');
 </script>
+
+<MetaTags
+	openGraph={{
+		url: $page.url,
+		title: pageTitle + '|' + $SITE_META.title,
+		description: $SITE_META.description1 + $SITE_META.description2,
+		images: [
+			{
+				url: assets + '/og-image.png',
+				width: 800,
+				height: 537,
+				alt: 'Map UKR'
+			}
+		],
+		site_name: $SITE_META.title
+	}}
+	twitter={{
+		handle: '@handle',
+		site: '@site',
+		cardType: 'summary_large_image',
+		title: pageTitle + '|' + $SITE_META.title,
+		description: $SITE_META.description1 + $SITE_META.description2,
+		image: assets + '/og-image.png',
+		imageAlt: 'Map UKR'
+	}}
+/>
 
 <svelte:head>
 	<title>

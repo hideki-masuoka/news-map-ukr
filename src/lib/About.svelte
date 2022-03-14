@@ -1,9 +1,11 @@
+<script>
+	import { SITE_META } from '$lib/siteMeta.js';
+</script>
+
 <div class="about-text">
 	<h2>About</h2>
-	<p>
-		これはウクライナのニュースを読むときに、どの地域のことを指しているのかが分かるようにしたものです。
-	</p>
-	<p>ニュース・ソースはTwitter、地図はWikipediaをそれぞれ参照し、手動で追加しています。</p>
+	<p>{$SITE_META.description1}</p>
+	<p>{$SITE_META.description2}</p>
 	<hr />
 	<p class="text-sm text-right">
 		※さらに詳細を知るには、
