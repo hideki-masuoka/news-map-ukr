@@ -1,6 +1,4 @@
 <script>
-	import { page } from '$app/stores';
-	import { assets } from '$app/paths';
 	import { DateTime } from 'luxon';
 	import OEmbedTweet from '$lib/tweet/OEmbedTweet.svelte';
 	import EmbedTweet from '$lib/tweet/embedTweet.svelte';
@@ -23,12 +21,12 @@
 
 <MetaTags
 	openGraph={{
-		url: $page.url,
+		url: $SITE_META.hosting,
 		title: pageTitle + '|' + $SITE_META.title,
 		description: $SITE_META.description1 + $SITE_META.description2,
 		images: [
 			{
-				url: assets + '/og-image.png',
+				url: $SITE_META.hosting + '/og-image.png',
 				width: 800,
 				height: 537,
 				alt: 'Map UKR'
@@ -37,12 +35,10 @@
 		site_name: $SITE_META.title
 	}}
 	twitter={{
-		handle: '@handle',
-		site: '@site',
 		cardType: 'summary_large_image',
 		title: pageTitle + '|' + $SITE_META.title,
 		description: $SITE_META.description1 + $SITE_META.description2,
-		image: assets + '/og-image.png',
+		image: $SITE_META.hosting + '/og-image.png',
 		imageAlt: 'Map UKR'
 	}}
 />
