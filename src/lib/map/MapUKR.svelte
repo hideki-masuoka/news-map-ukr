@@ -14,10 +14,10 @@
 		if ('UA-UKR' === id) {
 			id = false;
 		}
-		if (id) {
+		if ((id ?? false)) {
 			let target = document.getElementById(id);
 
-			if (target.classList) {
+			if ((target ?? false)) {
 				target.classList.toggle('selected-area');
 			}
 			return true;
@@ -45,7 +45,7 @@
 		if (uaMap) {
 			let pathList = uaMap.getElementsByTagName('path');
 			Object.entries(pathList).forEach(([, element]) => {
-				if (element.classList) {
+				if ((element ?? false)) {
 					element.classList.remove('selected-area');
 				}
 			});
