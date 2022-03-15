@@ -8,5 +8,5 @@ export const SITE_META = readable({
 		'ニュース・ソースはTwitter、地図はWikipediaをそれぞれ参照し、手動で追加しています。',
 	repo: 'https://github.com/hideki-masuoka/news-map-ukr',
 	hosting: 'https://news-map-ukr.web.app',
-	lastupdate: '2022-03-15 06:35'
+	lastupdate: '2022-03-16 01:14'
 });

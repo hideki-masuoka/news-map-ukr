@@ -17,7 +17,7 @@
 {:else if 3 === monthNum}
 	<strong>2022年3月</strong>
 	<ul class="monthly">
-		{#each [...Array(13).keys()] as dayNum}
+		{#each [...Array(14).keys()] as dayNum}
 			<li>
 				<a href="/days/d202203{toDayStr(dayNum)}/">{toDayStr(dayNum)}日</a>
 			</li>
