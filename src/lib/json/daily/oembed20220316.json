@@ -479,5 +479,18 @@
 		"provider_name": "Twitter",
 		"provider_url": "https://twitter.com",
 		"version": "1.0"
+	},
+	"1504222970033618952": {
+		"url": "https://twitter.com/Ukrinform_JP/status/1504222970033618952",
+		"author_name": "\u30a6\u30af\u30eb\u30a4\u30f3\u30d5\u30a9\u30eb\u30e0\u65e5\u672c\u8a9e\u7248",
+		"author_url": "https://twitter.com/Ukrinform_JP",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"ja\" dir=\"ltr\">\u30e1\u30ea\u30c8\u30dd\u30ea\u5e02\u9577\u306e\u89e3\u653e\u306f\u9732\u5175\u6355\u865c\uff19\u4eba\u3068\u306e\u4ea4\u63db\u3067\u5b9f\u73fe\uff1d\u30a6\u30af\u30e9\u30a4\u30ca\u5927\u7d71\u9818\u5e9c <a href=\"https://t.co/cagmYRPFfV\">https://t.co/cagmYRPFfV</a></p>&mdash; \u30a6\u30af\u30eb\u30a4\u30f3\u30d5\u30a9\u30eb\u30e0\u65e5\u672c\u8a9e\u7248 (@Ukrinform_JP) <a href=\"https://twitter.com/Ukrinform_JP/status/1504222970033618952?ref_src=twsrc%5Etfw\">March 16, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
 	}
 }
