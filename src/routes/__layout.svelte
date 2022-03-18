@@ -10,8 +10,15 @@
 
 <Footer />
 
-<style>
+<style lang="windicss">
 	:global(a:hover) {
 		opacity: 0.75;
+	}
+
+	:global(.d-gui-chips) {
+		@apply rounded-full py-1 px-4 mb-1 bg-stone-100;
+		:global(svg) {
+			@apply bg-stone-300 rounded-1/2 -ml-2 my-1 p-1 w-6 h-6;
+		}
 	}
 </style>
