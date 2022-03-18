@@ -39,10 +39,6 @@
 		.area-item:last-child {
 			flex-grow: 1;
 		}
-		.area-select {
-			&:hover {
-				opacity: 0.75;
-			}
-		}
+		.area-select {}
 	}
 </style>

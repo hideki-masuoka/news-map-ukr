@@ -8,20 +8,24 @@
 {#if 2 === monthNum}
 	<strong>2022年2月</strong>
 	<ul class="monthly">
-		<li><a href="/days/d20220224/">24日</a></li>
-		<li><a href="/days/d20220225/">25日</a></li>
-		<li><a href="/days/d20220226/">26日</a></li>
-		<li><a href="/days/d20220227/">27日</a></li>
-		<li><a href="/days/d20220228/">28日</a></li>
+		  {#each [23,24,25,26,27] as dayNum}
+			    <li class="d-gui-chips">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg>
+				      <a href="/days/d202202{toDayStr(dayNum)}/">{toDayStr(dayNum)}日</a>
+			    </li>
+		  {/each}
+      <li class="d-gui-spacer">&nbsp;</li>
 	</ul>
 {:else if 3 === monthNum}
 	<strong>2022年3月</strong>
 	<ul class="monthly">
 		{#each [...Array(17).keys()] as dayNum}
-			<li>
-				<a href="/days/d202203{toDayStr(dayNum)}/">{toDayStr(dayNum)}日</a>
+			  <li class="d-gui-chips">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg>
+				    <a href="/days/d202203{toDayStr(dayNum)}/">{toDayStr(dayNum)}日</a>
 			</li>
 		{/each}
+    <li class="d-gui-spacer">&nbsp;</li>
 	</ul>
 {:else}
 	<p>Not Found</p>
@@ -29,21 +33,7 @@
 
 <style lang="windicss">
 	.monthly {
-		@apply flex flex-wrap justify-evenly;
+		@apply flex flex-wrap justify-left gap-x-2 gap-y-1;
 
-		li {
-			@apply flex-grow flex-shrink;
-
-			a {
-				&:hover {
-					opacity: 0.75;
-				}
-				&:before {
-					content: '▶';
-					display: inline;
-					padding-right: 0.5em;
-				}
-			}
-		}
 	}
 </style>
