@@ -39,6 +39,7 @@
 		.area-item:last-child {
 			flex-grow: 1;
 		}
-		.area-select {}
+		.area-select {
+		}
 	}
 </style>
