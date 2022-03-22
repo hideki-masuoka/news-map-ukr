@@ -9,7 +9,16 @@
 	<hr />
 	<p class="text-sm text-right">
 		※さらに詳細を知るには、
-		<a href="https://liveuamap.com" target="_blank" rel="noopener">Live Universal Awareness Map</a>
+		<a
+			href="https://wartoday.info"
+			target="_blank"
+			rel="noopener"
+			title="ロシアの大規模なウクライナ侵攻事件に関する情報を掲載したインタラクティブマップ"
+			>wartoday.info</a
+		>
+		もしくは<a href="https://liveuamap.com" target="_blank" rel="noopener"
+			>Live Universal Awareness Map</a
+		>
 		をチェックしてみてください。
 	</p>
 </div>
