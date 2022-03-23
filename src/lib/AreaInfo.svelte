@@ -10,7 +10,7 @@
 <div class="area-info">
 	{#each Object.entries($areaData) as [key, item]}
 		{#if !('UA-UKR' === key)}
-			<div class="area-item d-gui-chips text-sm">
+			<div class="area-item d-gui-chips text-xs">
 				<button class="area-select" title={key} on:click={areaSelect(key)}>
 					<svg fill="currentColor" stroke="none" width="24" height="24" viewBox="0 0 24 24"
 						><path

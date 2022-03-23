@@ -778,5 +778,44 @@
 		"provider_name": "Twitter",
 		"provider_url": "https://twitter.com",
 		"version": "1.0"
+	},
+	"1506416684885688323": {
+		"url": "https://twitter.com/Reuters/status/1506416684885688323",
+		"author_name": "Reuters",
+		"author_url": "https://twitter.com/Reuters",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"en\" dir=\"ltr\">&#39;Russian cruelty is so brutal,&#39; a doctor at the psychiatric hospital in Mykolaiv, Anatolii Pavlov, told Reuters with tears in his eyes <a href=\"https://t.co/iMciZPweuw\">pic.twitter.com/iMciZPweuw</a></p>&mdash; Reuters (@Reuters) <a href=\"https://twitter.com/Reuters/status/1506416684885688323?ref_src=twsrc%5Etfw\">March 22, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
+	},
+	"1506419215665926146": {
+		"url": "https://twitter.com/UKRINFORM/status/1506419215665926146",
+		"author_name": "Ukrinform",
+		"author_url": "https://twitter.com/UKRINFORM",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"uk\" dir=\"ltr\">\u0412\u043e\u0440\u043e\u0433\u0443 \u043d\u0435 \u0432\u0434\u0430\u043b\u043e\u0441\u044f \u043f\u0440\u043e\u0441\u0443\u043d\u0443\u0442\u0438\u0441\u044f \u043d\u0430 \u0414\u043e\u043d\u0435\u0446\u044c\u043a\u043e\u043c\u0443 \u0439 \u041b\u0443\u0433\u0430\u043d\u0441\u044c\u043a\u043e\u043c\u0443 \u043d\u0430\u043f\u0440\u044f\u043c\u043a\u0430\u0445<a href=\"https://t.co/pR5yoKl0sx\">https://t.co/pR5yoKl0sx</a> <a href=\"https://t.co/qnBMbv1mp2\">pic.twitter.com/qnBMbv1mp2</a></p>&mdash; Ukrinform (@UKRINFORM) <a href=\"https://twitter.com/UKRINFORM/status/1506419215665926146?ref_src=twsrc%5Etfw\">March 22, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
+	},
+	"1506419258179436556": {
+		"url": "https://twitter.com/UKRINFORM/status/1506419258179436556",
+		"author_name": "Ukrinform",
+		"author_url": "https://twitter.com/UKRINFORM",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"uk\" dir=\"ltr\">\u0420\u043e\u0441\u0456\u044f\u043d\u0438 \u0440\u043e\u0437\u0433\u0440\u0430\u0431\u0443\u0432\u0430\u043b\u0438 \u0432 \u0427\u043e\u0440\u043d\u043e\u0431\u0438\u043b\u0456 \u043d\u043e\u0432\u0456\u0442\u043d\u044e \u043b\u0430\u0431\u043e\u0440\u0430\u0442\u043e\u0440\u0456\u044e \u0432\u0430\u0440\u0442\u0456\u0441\u0442\u044e \u20ac6 \u043c\u0456\u043b\u044c\u0439\u043e\u043d\u0456\u0432<a href=\"https://t.co/kOxKrqxH0A\">https://t.co/kOxKrqxH0A</a> <a href=\"https://t.co/YpiLZ8to3d\">pic.twitter.com/YpiLZ8to3d</a></p>&mdash; Ukrinform (@UKRINFORM) <a href=\"https://twitter.com/UKRINFORM/status/1506419258179436556?ref_src=twsrc%5Etfw\">March 22, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
 	}
 }
