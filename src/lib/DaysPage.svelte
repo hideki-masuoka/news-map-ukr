@@ -136,7 +136,7 @@
 	.tweet-list {
 		grid-area: tweet;
 		max-height: 50vh;
-		@apply overflow-y-scroll;
+		@apply overflow-y-scroll pb-48;
 
 		@screen md {
 			max-height: 80vh;

@@ -11,8 +11,12 @@
 <Footer />
 
 <style lang="windicss">
-	:global(a:hover) {
+	:global(a:hover, button:hover) {
 		opacity: 0.75;
+	}
+
+	:global(button:disabled) {
+		cursor: not-allowed;
 	}
 
 	:global(.d-gui-chips) {
