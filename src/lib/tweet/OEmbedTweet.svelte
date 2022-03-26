@@ -68,7 +68,7 @@
 			{#if isLoaded[item.id]}
 				<div class="tweetLoading">Loading...</div>
 			{/if}
-			<div class="tweet-content">
+			<div class="tweet-content d-gui-box">
 				{#if item.embed.html ?? false}
 					{@html item.embed.html.replace('twitter-tweet', 'twitter-tweet-noembed')}
 				{:else}
@@ -103,7 +103,7 @@
 		@apply container m-auto w-full pr-4;
 	}
 	.tweetItem {
-		@apply flex-grow flex-shrink;
+		@apply flex-grow flex-shrink mb-8;
 
 		.tweetLoading {
 			min-width: 300px;
@@ -120,6 +120,10 @@
 			@apply inline;
 		}
 		.view-area {
+			@apply mb-4 d-gui-box-pull-sm;
+			&:active {
+				@apply d-gui-box-push-sm;
+			}
 		}
 	}
 
@@ -129,7 +133,7 @@
 	}
 
 	.tweet-content {
-		border: 1px solid #ccc;
+		border: 0 solid #ccc;
 		border-radius: 0.5em;
 		@apply m-auto pb-4 mb-4 ml-4;
 	}

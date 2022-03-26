@@ -89,7 +89,7 @@
 		}
 
 		.header-external-link {
-			@apply inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-2 md:mt-0;
+			@apply inline-flex items-center py-1 px-3 text-bold mt-2 md:mt-0 d-gui-box-pull-sm active:d-gui-box-push-sm;
 		}
 	}
 </style>

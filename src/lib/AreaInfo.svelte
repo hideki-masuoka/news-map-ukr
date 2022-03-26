@@ -31,13 +31,20 @@
 		@screen md {
 			@apply flex;
 		}
-		@apply mt-4 flex-wrap gap-x-4 gap-y-1 justify-between;
+		@apply mt-4 flex-wrap gap-x-4 gap-y-2 justify-left;
 
 		svg {
 			@apply inline;
 		}
+		.area-item {
+			@apply d-gui-box-pull-sm;
+			&:active {
+				@apply d-gui-box-push-sm;
+			}
+		}
 		.area-item:last-child {
 			flex-grow: 1;
+			box-shadow: none;
 		}
 		.area-select {
 		}

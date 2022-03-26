@@ -84,13 +84,14 @@
 <style lang="windicss">
 	.map-ukr {
 		grid-template-areas: 'map';
-		@apply container grid m-auto;
+		@apply container grid m-auto rounded-md d-gui-box;
 
 		svg {
 			@apply w-full h-auto;
 		}
 		.map-base {
 			grid-area: map;
+			@apply rounded-md;
 		}
 		.map-overlay {
 			grid-area: map;

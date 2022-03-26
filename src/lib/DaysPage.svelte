@@ -108,13 +108,13 @@
 				'about tweet';
 		}
 
-		@apply container m-auto px-5 grid gap-x-5 gap-y-1;
+		@apply container m-auto px-5 grid gap-y-1;
 
 		h1 {
 			grid-area: title;
 			@apply font-bold text-base;
 			@screen md {
-				@apply text-2xl;
+				@apply text-2xl ml-4;
 			}
 		}
 	}
@@ -136,10 +136,11 @@
 	.tweet-list {
 		grid-area: tweet;
 		max-height: 50vh;
-		@apply overflow-y-scroll pb-48;
+		@apply overflow-y-scroll pt-1 pb-48;
 
 		@screen md {
 			max-height: 80vh;
+			@apply pl-4;
 		}
 	}
 	.site-about {
