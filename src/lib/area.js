@@ -1,5 +1,7 @@
 import { readable, writable } from 'svelte/store';
 
+export const currentTweetId = writable();
+
 export const areaData = readable({
 	'UA-05': {
 		id: 'UA-05',
@@ -125,6 +127,16 @@ export const areaData = readable({
 		id: 'UA-32-kyiv',
 		name: 'キエフ市',
 		sort: '0'
+	},
+	'dnipro-ua': {
+		id: 'dnipro-ua',
+		name: 'ドニエプル川',
+		sort: '800'
+	},
+	'group-donbas': {
+		id: 'group-donbas',
+		name: 'ドンバス地方',
+		sort: '900'
 	},
 	'crimea-ua': {
 		id: 'crimea-ua',

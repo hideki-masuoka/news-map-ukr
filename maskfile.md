@@ -11,10 +11,10 @@ echo '},' >>tweet.js
 echo -e "\n" >>tweet.js
 ```
 
-## make:json
+## make:json (DATENUM)
 
 ```sh
-php ./php/getTwitterOEmbed.php
+php ./php/getTwitterOEmbed.php $DATENUM
 ```
 
 ## deploy
@@ -27,16 +27,24 @@ firebase deploy
 
 ```sh
 pnpm build
+pnpm exec svelte-sitemap --domain https://news-map-ukr.web.app
 ```
 
 ## start
 
 ```bash
 pnpm dev
+echo -e "\n"
 ```
 
 ## format
 
 ```sh
 pnpm format
+```
+
+## postbuild
+
+```sh
+pnpm exec svelte-sitemap --domain https://news-map-ukr.web.app
 ```

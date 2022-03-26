@@ -2,10 +2,12 @@
 	import { DateTime } from 'luxon';
 	import OEmbedTweet from '$lib/tweet/OEmbedTweet.svelte';
 	import EmbedTweet from '$lib/tweet/embedTweet.svelte';
-	import MapUKR from '$lib/MapUKR.svelte';
+	import MapUKR from '$lib/map/MapUKR.svelte';
 	import AreaInfo from '$lib/AreaInfo.svelte';
 	import About from '$lib/About.svelte';
 	import { SITE_META } from '$lib/siteMeta.js';
+
+	import { MetaTags } from 'svelte-meta-tags';
 
 	export let tweetdata = [];
 	export let pageTitle = '';
@@ -16,6 +18,30 @@
 		.reconfigure({ locale: 'jp', outputCalendar: 'japanese' })
 		.setZone('EET');
 </script>
+
+<MetaTags
+	openGraph={{
+		url: $SITE_META.hosting,
+		title: pageTitle + '|' + $SITE_META.title,
+		description: $SITE_META.description1 + $SITE_META.description2,
+		images: [
+			{
+				url: $SITE_META.hosting + '/og-image.png',
+				width: 800,
+				height: 537,
+				alt: 'Map UKR'
+			}
+		],
+		site_name: $SITE_META.title
+	}}
+	twitter={{
+		cardType: 'summary_large_image',
+		title: pageTitle + '|' + $SITE_META.title,
+		description: $SITE_META.description1 + $SITE_META.description2,
+		image: $SITE_META.hosting + '/og-image.png',
+		imageAlt: 'Map UKR'
+	}}
+/>
 
 <svelte:head>
 	<title>
@@ -110,7 +136,7 @@
 	.tweet-list {
 		grid-area: tweet;
 		max-height: 50vh;
-		@apply overflow-y-scroll;
+		@apply overflow-y-scroll pb-48;
 
 		@screen md {
 			max-height: 80vh;

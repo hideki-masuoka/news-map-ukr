@@ -1,7 +1,14 @@
 <?php
+
+if (! ($argv[1] ?? false)) {
+    echo "target not found";
+    exit;
+}
+
 $outputfilename = dirname(__FILE__, 2) . '/src/lib/json/daily/oembed';
 $inputJsonFile = dirname(__FILE__, 2) . '/src/lib/json/tweet.json';
-$targetDate = "20220310";
+//$targetDate = "20220310";
+$targetDate = $argv[1];
 
 $targetjson = file_get_contents($inputJsonFile);
 $tweetdata = json_decode($targetjson, true);
@@ -20,7 +27,12 @@ foreach($tweetdata as $k => $item) {
   $retdata[$date][$k] = json_decode($data, true);
 }
 
+if (empty($retdata)) {
+    echo 'data not found';
+    exit;
+}
+
 foreach($retdata as $k => $item) {
   ksort($item);
-  file_put_contents($outputfilename . $k . ".json", json_encode($item));
+  file_put_contents($outputfilename . $k . ".json", json_encode($item, JSON_PRETTY_PRINT));
 }

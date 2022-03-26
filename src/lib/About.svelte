@@ -1,13 +1,24 @@
+<script>
+	import { SITE_META } from '$lib/siteMeta.js';
+</script>
+
 <div class="about-text">
 	<h2>About</h2>
-	<p>
-		これはウクライナのニュースを読むときに、どの地域のことを指しているのかが分かるようにしたものです。
-	</p>
-	<p>ニュース・ソースはTwitter、地図はWikipediaをそれぞれ参照し、手動で追加しています。</p>
+	<p>{$SITE_META.description1}</p>
+	<p>{$SITE_META.description2}</p>
 	<hr />
 	<p class="text-sm text-right">
 		※さらに詳細を知るには、
-		<a href="https://liveuamap.com" target="_blank" rel="noopener">Live Universal Awareness Map</a>
+		<a
+			href="https://wartoday.info"
+			target="_blank"
+			rel="noopener"
+			title="ロシアの大規模なウクライナ侵攻事件に関する情報を掲載したインタラクティブマップ"
+			>wartoday.info</a
+		>
+		もしくは<a href="https://liveuamap.com" target="_blank" rel="noopener"
+			>Live Universal Awareness Map</a
+		>
 		をチェックしてみてください。
 	</p>
 </div>
