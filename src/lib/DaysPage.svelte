@@ -144,7 +144,8 @@
 	.tweet-list {
 		grid-area: tweet;
 		max-height: 50vh;
-		@apply overflow-y-scroll pt-4 pb-48 px-2 rounded-md d-gui-box-push-sm;
+		box-shadow: inset -4px -4px 12px #fafaf9, inset 4px 4px 12px #e7e5e4;
+		@apply overflow-y-scroll pt-4 pb-48 px-2 rounded-lg;
 
 		@screen md {
 			max-height: 80vh;
