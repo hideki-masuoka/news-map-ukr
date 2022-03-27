@@ -71,9 +71,17 @@
 <main class="days-page">
 	<h1>{pageTitle}</h1>
 	<div class="clock">
-		現在時刻
-		<span>■日本時間【{TimeJP.toFormat("LLL'月'dd'日' HH:mm")}】</span>
-		<span>■現地時間【{TimeUA.toFormat("LLL'月'dd'日' HH:mm")}】</span>
+		<strong class="text-stone-800">現在時刻</strong>
+		<span class="text-stone-700 pl-4"
+			><span class="text-xs md:text-sm">日本時間</span>{TimeJP.toFormat(
+				"LLL'月'dd'日' HH:mm"
+			)}</span
+		>
+		<span class="text-stone-700 pl-4"
+			><span class="text-xs md:text-sm">現地時間</span>{TimeUA.toFormat(
+				"LLL'月'dd'日' HH:mm"
+			)}</span
+		>
 	</div>
 	<section class="map-ukr">
 		<MapUKR />
@@ -108,19 +116,19 @@
 				'about tweet';
 		}
 
-		@apply container m-auto px-5 grid gap-y-1;
+		@apply container m-auto px-5 grid gap-y-1 gap-x-4;
 
 		h1 {
 			grid-area: title;
-			@apply font-bold text-base;
+			@apply font-bold text-base text-stone-700;
 			@screen md {
-				@apply text-2xl ml-4;
+				@apply text-2xl;
 			}
 		}
 	}
 	.clock {
 		grid-area: clock;
-		@apply text-xs;
+		@apply text-xs flex flex-col md:flex-row pb-2;
 
 		@screen md {
 			@apply text-base;
@@ -136,7 +144,7 @@
 	.tweet-list {
 		grid-area: tweet;
 		max-height: 50vh;
-		@apply overflow-y-scroll pt-1 pb-48;
+		@apply overflow-y-scroll pt-4 pb-48 px-2 rounded-md d-gui-box-push-sm;
 
 		@screen md {
 			max-height: 80vh;

@@ -9,8 +9,16 @@ module.exports = {
 					borderWidth: '0px',
 					padding: '1rem'
 				},
+				'.d-gui-box-sm': {
+					boxShadow: '-4px -4px 6px #fff, 4px 4px 6px #d6d3d1',
+					borderWidth: '0px'
+				},
+				'.d-gui-box-xs': {
+					boxShadow: '-2px -2px 4px #fff, 2px 2px 4px #d6d3d1',
+					borderWidth: '0px'
+				},
 				'.d-gui-box-push': {
-					boxShadow: ' inset -8px -8px 10px #fff, inset 8px 8px 10px #d6d3d1'
+					boxShadow: 'inset -8px -8px 10px #fff, inset 8px 8px 10px #d6d3d1'
 				},
 				'.d-gui-box-push-sm': {
 					boxShadow: 'inset -3px -3px 4px #fff, inset 3px 3px 4px #d6d3d1',
