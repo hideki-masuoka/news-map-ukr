@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import { DateTime } from 'luxon';
 	import OEmbedTweet from '$lib/tweet/OEmbedTweet.svelte';
 	import EmbedTweet from '$lib/tweet/embedTweet.svelte';
@@ -20,8 +21,9 @@
 </script>
 
 <MetaTags
+	canonical={$SITE_META.hosting + $page.url.pathname}
 	openGraph={{
-		url: $SITE_META.hosting,
+		url: $SITE_META.hosting + $page.url.pathname,
 		title: pageTitle + '|' + $SITE_META.title,
 		description: $SITE_META.description1 + $SITE_META.description2,
 		images: [
