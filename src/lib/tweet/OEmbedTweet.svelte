@@ -119,13 +119,13 @@
 		svg {
 			@apply inline;
 		}
-		  .view-area {
-          transition: all 0.125s ease-out;
-			    @apply mb-4 d-gui-box-pull-sm;
-			    &:active {
-				      @apply d-gui-box-push-sm;
-			    }
-		  }
+		.view-area {
+			transition: all 0.125s ease-out;
+			@apply mb-4 d-gui-box-pull-sm;
+			&:active {
+				@apply d-gui-box-push-sm;
+			}
+		}
 	}
 
 	.tweet-hr {

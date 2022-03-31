@@ -104,15 +104,15 @@
 </main>
 
 <style lang="windicss">
-:global(body) {
-    @apply  bg-gradient-to-t from-stone-300;
-}
-.days-page {
+	:global(body) {
+		@apply bg-gradient-to-t from-stone-300;
+	}
+	.days-page {
 		grid-template-areas:
-			  'clock map'
-			  'title map'
-			  'tweet tweet'
-			  'about about';
+			'clock map'
+			'title map'
+			'tweet tweet'
+			'about about';
 
 		@screen md {
 			grid-template-areas:
@@ -149,7 +149,8 @@
 	.tweet-list {
 		grid-area: tweet;
 		max-height: 50vh;
-		box-shadow: inset -4px -4px 12px rgba(255,255,255, 0.5), inset 4px 4px 12px rgba(0,0,0,0.125);
+		box-shadow: inset -4px -4px 12px rgba(255, 255, 255, 0.5),
+			inset 4px 4px 12px rgba(0, 0, 0, 0.125);
 		@apply overflow-y-scroll pt-4 pb-48 px-2 rounded-lg;
 
 		@screen md {

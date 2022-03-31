@@ -5,28 +5,31 @@ module.exports = {
 		plugin(function ({ addComponents }) {
 			addComponents({
 				'.d-gui-box': {
-					  boxShadow: '-8px -8px 10px rgba(255,255,255,0.5), 8px 8px 10px rgba(0,0,0,0.125)',
+					boxShadow: '-8px -8px 10px rgba(255,255,255,0.5), 8px 8px 10px rgba(0,0,0,0.125)',
 					borderWidth: '0px',
 					padding: '1rem'
 				},
 				'.d-gui-box-sm': {
-					  boxShadow: '-4px -4px 6px rgba(255,255,255,0.5), 4px 4px 6px rgba(0,0,0,0.125)',
+					boxShadow: '-4px -4px 6px rgba(255,255,255,0.5), 4px 4px 6px rgba(0,0,0,0.125)',
 					borderWidth: '0px'
 				},
 				'.d-gui-box-xs': {
-					  boxShadow: '-2px -2px 4px rgba(255,255,255,0.5), 2px 2px 4px rgba(0,0,0,0.125)',
+					boxShadow: '-2px -2px 4px rgba(255,255,255,0.5), 2px 2px 4px rgba(0,0,0,0.125)',
 					borderWidth: '0px'
 				},
 				'.d-gui-box-push': {
-					  boxShadow: 'inset -8px -8px 10px rgba(255,255,255,0.5), inset 8px 8px 10px rgba(0,0,0,0.125)'
+					boxShadow:
+						'inset -8px -8px 10px rgba(255,255,255,0.5), inset 8px 8px 10px rgba(0,0,0,0.125)'
 				},
 				'.d-gui-box-push-sm': {
-					  boxShadow: 'inset -3px -3px 4px rgba(255,255,255,0.5), inset 3px 3px 4px rgba(0,0,0,0.125)',
+					boxShadow:
+						'inset -3px -3px 4px rgba(255,255,255,0.5), inset 3px 3px 4px rgba(0,0,0,0.125)',
 					paddingTop: '0.5rem',
 					paddingBottom: '0'
 				},
 				'.d-gui-box-push-xs': {
-					  boxShadow: 'inset -1px -1px 2px rgba(255,255,255,0.5), inset 1px 1px 2px rgba(0,0,0,0.125)',
+					boxShadow:
+						'inset -1px -1px 2px rgba(255,255,255,0.5), inset 1px 1px 2px rgba(0,0,0,0.125)',
 					paddingTop: '2px',
 					paddingBottom: '0'
 				},
