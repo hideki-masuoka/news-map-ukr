@@ -101,11 +101,13 @@
 			@apply hidden md:inline;
 		}
 	}
-	:global(.selected-area) {
+:global(.selected-area) {
+    transition: all 0.25s;
 		opacity: 0.75 !important;
 		fill: #ffff00 !important;
 	}
-	:global(#dnipro-ua.selected-area) {
+:global(#dnipro-ua.selected-area) {
+    transition: all 0.25s;
 		fill: #0000ff !important;
 	}
 </style>
