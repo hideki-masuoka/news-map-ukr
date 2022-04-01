@@ -83,7 +83,7 @@
 			><span class="text-xs md:text-sm">現地時間</span>{TimeUA.toFormat(
 				"LLL'月'dd'日' HH:mm"
 			)}</span
-		>
+		    >
 	</div>
 	<section class="map-ukr">
 		<MapUKR />
@@ -107,33 +107,37 @@
 	:global(body) {
 		@apply bg-gradient-to-t from-stone-300;
 	}
-	.days-page {
+.days-page {
 		grid-template-areas:
-			'clock map'
-			'title map'
-			'tweet tweet'
-			'about about';
+			  'clock clock'
+        'title title'
+			  'tweet tweet'
+			  'map map'
+			  'about about';
+
+		@apply container m-auto px-2 grid gap-y-1 gap-x-4;
 
 		@screen md {
-			grid-template-areas:
-				'clock title'
-				'map tweet'
-				'about tweet';
+			  grid-template-areas:
+				    'clock title'
+				    'map tweet'
+				    'about tweet';
+
+        @apply px-5;
 		}
 
-		@apply container m-auto px-5 grid gap-y-1 gap-x-4;
 
 		h1 {
-			grid-area: title;
-			@apply font-bold text-base text-stone-700;
-			@screen md {
-				@apply text-2xl;
-			}
+			  grid-area: title;
+			  @apply font-bold text-base text-stone-700;
+			  @screen md {
+				    @apply text-2xl;
+			  }
 		}
-	}
+}
 	.clock {
 		grid-area: clock;
-		@apply text-xs flex flex-col md:flex-row pb-2;
+		@apply text-xs flex flex-row pb-2;
 
 		@screen md {
 			@apply text-base;
@@ -151,7 +155,7 @@
 		max-height: 50vh;
 		box-shadow: inset -4px -4px 12px rgba(255, 255, 255, 0.5),
 			inset 4px 4px 12px rgba(0, 0, 0, 0.125);
-		@apply overflow-y-scroll pt-4 pb-48 px-2 rounded-lg;
+		@apply overflow-y-scroll overflow-x-hidden pt-4 pb-48 px-2 rounded-lg;
 
 		@screen md {
 			max-height: 80vh;
