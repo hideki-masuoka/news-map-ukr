@@ -141,7 +141,8 @@
 				flex-grow: 1;
 				@apply justify-start mr-0 ml-4 py-1 pl-4 gap-0;
 			}
-			.menu-button {
+			  .menu-button {
+            transition: all 0.125s ease-out;
 				@apply py-2 px-4 rounded-full font-bold text-stone-500 d-gui-box-pull-sm active:d-gui-box-push-sm text-md;
 				@screen md {
 					@apply mr-5;
@@ -149,12 +150,13 @@
 			}
 		}
 
-		.header-external-link {
-			@apply inline-flex items-center rounded-full py-2 px-4 font-bold text-stone-500 mt-2 d-gui-box-pull-sm active:d-gui-box-push-sm;
-			@screen md {
-				@apply mt-0 ml-auto mr-0;
-			}
-		}
+		  .header-external-link {
+          transition: all 0.125s ease-out;
+			    @apply inline-flex items-center rounded-full py-2 px-4 font-bold text-stone-500 mt-2 d-gui-box-pull-sm active:d-gui-box-push-sm;
+			    @screen md {
+				      @apply mt-0 ml-auto mr-0;
+			    }
+		  }
 
 		.toggle-nav-drawer {
 			@apply block text-stone-500 ml-auto mr-0 p-1 w-8 h-8 rounded-full d-gui-box-pull-sm active:d-gui-box-push-sm;

@@ -136,7 +136,7 @@
 	.tweet-content {
 		border: 0 solid #ccc;
 		border-radius: 0.5em;
-		@apply m-auto pb-4 mb-4 ml-4;
+		@apply m-auto pb-4 px-2 mb-4 ml-4;
 	}
 	:global(blockquote.twitter-tweet) {
 		opacity: 0;
@@ -146,7 +146,7 @@
 		@apply m-auto;
 	}
 	:global(.twitter-tweet-noembed) {
-		@apply text-right font-bold text-sm mx-0 md:mx-4 mb-0 flex flex-wrap flex-col overflow-x-auto;
+		@apply text-right font-bold text-sm rounded-md bg-stone-50 bg-gradient-to-r from-stone-200 p-2 mx-0 md:mx-4 mb-0 flex flex-wrap flex-col overflow-x-auto;
 
 		:global(a) {
 			color: blue;
