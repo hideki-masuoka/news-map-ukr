@@ -37,6 +37,7 @@
 			@apply inline;
 		}
 		.area-item {
+			transition: all 0.125s ease-out;
 			@apply d-gui-box-pull-sm;
 			&:active {
 				@apply d-gui-box-push-sm;

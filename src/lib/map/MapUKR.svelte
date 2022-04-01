@@ -84,28 +84,30 @@
 <style lang="windicss">
 	.map-ukr {
 		grid-template-areas: 'map';
-		@apply container grid m-auto rounded-md d-gui-box;
+		@apply container grid m-auto rounded-md d-gui-box p-1 md:p-4;
 
 		svg {
 			@apply w-full h-auto;
 		}
 		.map-base {
 			grid-area: map;
-			@apply rounded-md;
+			@apply rounded-md d-gui-box-xs p-0;
 		}
 		.map-overlay {
 			grid-area: map;
 		}
 		.map-name {
 			grid-area: map;
-			@apply hidden md:inline;
+			@apply inline;
 		}
 	}
 	:global(.selected-area) {
+		transition: all 0.25s;
 		opacity: 0.75 !important;
 		fill: #ffff00 !important;
 	}
 	:global(#dnipro-ua.selected-area) {
+		transition: all 0.25s;
 		fill: #0000ff !important;
 	}
 </style>

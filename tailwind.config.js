@@ -5,30 +5,41 @@ module.exports = {
 		plugin(function ({ addComponents }) {
 			addComponents({
 				'.d-gui-box': {
-					boxShadow: '-8px -8px 10px #fff, 8px 8px 10px #d6d3d1',
+					boxShadow: '-8px -8px 10px rgba(255,255,255,0.5), 8px 8px 10px rgba(0,0,0,0.125)',
 					borderWidth: '0px',
 					padding: '1rem'
 				},
+				'.d-gui-box-sm': {
+					boxShadow: '-4px -4px 6px rgba(255,255,255,0.5), 4px 4px 6px rgba(0,0,0,0.125)',
+					borderWidth: '0px'
+				},
+				'.d-gui-box-xs': {
+					boxShadow: '-2px -2px 4px rgba(255,255,255,0.5), 2px 2px 4px rgba(0,0,0,0.125)',
+					borderWidth: '0px'
+				},
 				'.d-gui-box-push': {
-					boxShadow: ' inset -8px -8px 10px #fff, inset 8px 8px 10px #d6d3d1'
+					boxShadow:
+						'inset -8px -8px 10px rgba(255,255,255,0.5), inset 8px 8px 10px rgba(0,0,0,0.125)'
 				},
 				'.d-gui-box-push-sm': {
-					boxShadow: 'inset -3px -3px 4px #fff, inset 3px 3px 4px #d6d3d1',
+					boxShadow:
+						'inset -3px -3px 4px rgba(255,255,255,0.5), inset 3px 3px 4px rgba(0,0,0,0.125)',
 					paddingTop: '0.5rem',
 					paddingBottom: '0'
 				},
 				'.d-gui-box-push-xs': {
-					boxShadow: 'inset -1px -1px 2px #fff, inset 1px 1px 2px #d6d3d1',
+					boxShadow:
+						'inset -1px -1px 2px rgba(255,255,255,0.5), inset 1px 1px 2px rgba(0,0,0,0.125)',
 					paddingTop: '2px',
 					paddingBottom: '0'
 				},
 				'.d-gui-box-pull': {
 					boxShadow:
-						'-8px -8px 10px #fff, 8px 8px 10px #d6d3d1, inset -6px -6px 8px #e7e5e4, inset 6px 6px 10px #fff'
+						'-8px -8px 10px rgba(255,255,255,0.5), 8px 8px 10px rgba(0,0,0,0.125), inset -6px -6px 8px rgba(0,0,0,0.25), inset 6px 6px 10px rgba(255,255,255,0.5)'
 				},
 				'.d-gui-box-pull-sm': {
 					boxShadow:
-						'-4px -4px 5px #fff, 4px 4px 5px #d6d3d1, inset -3px -3px 4px #e7e5e4, inset 3px 3px 4px #fff',
+						'-4px -4px 5px rgba(255,255,255,0.5), 4px 4px 5px rgba(0,0,0,0.125), inset -3px -3px 4px rgba(0,0,0,0.25), inset 3px 3px 4px rgba(255,255,255,0.5)',
 					paddingTop: '0.25rem',
 					paddingBottom: '0.25rem'
 				},

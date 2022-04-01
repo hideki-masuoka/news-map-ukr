@@ -120,6 +120,7 @@
 			@apply inline;
 		}
 		.view-area {
+			transition: all 0.125s ease-out;
 			@apply mb-4 d-gui-box-pull-sm;
 			&:active {
 				@apply d-gui-box-push-sm;
@@ -145,7 +146,7 @@
 		@apply m-auto;
 	}
 	:global(.twitter-tweet-noembed) {
-		@apply text-right font-bold text-sm mx-4 mb-0 flex flex-wrap flex-col;
+		@apply text-right font-bold text-sm mx-0 md:mx-4 mb-0 flex flex-wrap flex-col overflow-x-auto;
 
 		:global(a) {
 			color: blue;

@@ -12,7 +12,7 @@
 
 <style lang="windicss">
 	:global(body) {
-		@apply bg-stone-100;
+		@apply bg-stone-50;
 	}
 	:global(a:hover, button:hover) {
 		opacity: 0.75;
