@@ -83,7 +83,7 @@
 			><span class="text-xs md:text-sm">現地時間</span>{TimeUA.toFormat(
 				"LLL'月'dd'日' HH:mm"
 			)}</span
-		    >
+		>
 	</div>
 	<section class="map-ukr">
 		<MapUKR />
@@ -107,34 +107,33 @@
 	:global(body) {
 		@apply bg-gradient-to-t from-stone-300;
 	}
-.days-page {
+	.days-page {
 		grid-template-areas:
-			  'clock clock'
-        'title title'
-			  'tweet tweet'
-			  'map map'
-			  'about about';
+			'clock clock'
+			'title title'
+			'tweet tweet'
+			'map map'
+			'about about';
 
 		@apply container m-auto px-2 grid gap-y-1 gap-x-4;
 
 		@screen md {
-			  grid-template-areas:
-				    'clock title'
-				    'map tweet'
-				    'about tweet';
+			grid-template-areas:
+				'clock title'
+				'map tweet'
+				'about tweet';
 
-        @apply px-5;
+			@apply px-5;
 		}
-
 
 		h1 {
-			  grid-area: title;
-			  @apply font-bold text-base text-stone-700;
-			  @screen md {
-				    @apply text-2xl;
-			  }
+			grid-area: title;
+			@apply font-bold text-base text-stone-700;
+			@screen md {
+				@apply text-2xl;
+			}
 		}
-}
+	}
 	.clock {
 		grid-area: clock;
 		@apply text-xs flex flex-row pb-2;
