@@ -98,7 +98,7 @@
 		}
 		.map-name {
 			grid-area: map;
-			@apply hidden md:inline;
+			@apply inline;
 		}
 	}
 	:global(.selected-area) {

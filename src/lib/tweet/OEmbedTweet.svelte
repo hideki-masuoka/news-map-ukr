@@ -146,7 +146,7 @@
 		@apply m-auto;
 	}
 	:global(.twitter-tweet-noembed) {
-		@apply text-right font-bold text-sm mx-4 mb-0 flex flex-wrap flex-col;
+		@apply text-right font-bold text-sm mx-0 md:mx-4 mb-0 flex flex-wrap flex-col overflow-x-auto;
 
 		:global(a) {
 			color: blue;
