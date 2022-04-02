@@ -37,6 +37,19 @@
 		{/each}
 		<li class="d-gui-spacer">&nbsp;</li>
 	</ul>
+{:else if 4 === monthNum}
+	<strong>2022年4月</strong>
+	<ul class="monthly">
+		{#each [...Array(1).keys()] as dayNum}
+			<li class="d-gui-chips button-select-day">
+				<svg fill="currentColor" viewBox="0 0 24 24"
+					><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg
+				>
+				<a href="/days/d202204{toDayStr(dayNum)}/" on:click={modalClose}>{toDayStr(dayNum)}日</a>
+			</li>
+		{/each}
+		<li class="d-gui-spacer">&nbsp;</li>
+	</ul>
 {:else}
 	<p>Not Found</p>
 {/if}

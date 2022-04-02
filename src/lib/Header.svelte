@@ -68,9 +68,7 @@
 						class="menu-button">2022年3月</button
 					>
 					<button
-						disabled
 						on:click={() => {
-							return;
 							openmenu(4);
 						}}
 						class="menu-button">2022年4月</button
