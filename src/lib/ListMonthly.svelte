@@ -1,14 +1,14 @@
 <script>
-import { getContext } from 'svelte';
-const { close } = getContext('simple-modal');
+	import { getContext } from 'svelte';
+	const { close } = getContext('simple-modal');
 
-export let monthNum = 2;
-const toDayStr = (num) => {
+	export let monthNum = 2;
+	const toDayStr = (num) => {
 		return String(num + 1).padStart(2, '0');
-};
-const modalClose = ()=> {
-    close();
-}
+	};
+	const modalClose = () => {
+		close();
+	};
 </script>
 
 {#if 2 === monthNum}
@@ -19,7 +19,7 @@ const modalClose = ()=> {
 				<svg fill="currentColor" viewBox="0 0 24 24"
 					><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg
 				>
-				<a href="/days/d202202{toDayStr(dayNum)}/" on:click="{modalClose}">{toDayStr(dayNum)}日</a>
+				<a href="/days/d202202{toDayStr(dayNum)}/" on:click={modalClose}>{toDayStr(dayNum)}日</a>
 			</li>
 		{/each}
 		<li class="d-gui-spacer">&nbsp;</li>
@@ -32,7 +32,7 @@ const modalClose = ()=> {
 				<svg fill="currentColor" viewBox="0 0 24 24"
 					><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg
 				>
-				<a href="/days/d202203{toDayStr(dayNum)}/" on:click="{modalClose}">{toDayStr(dayNum)}日</a>
+				<a href="/days/d202203{toDayStr(dayNum)}/" on:click={modalClose}>{toDayStr(dayNum)}日</a>
 			</li>
 		{/each}
 		<li class="d-gui-spacer">&nbsp;</li>
@@ -45,8 +45,8 @@ const modalClose = ()=> {
 	.monthly {
 		@apply flex flex-wrap justify-left gap-x-2 gap-y-1;
 	}
-.button-select-day {
-    transition: all 0.25s ease-out;
-    @apply d-gui-box-pull-sm active:d-gui-box-push-sm;
-}
+	.button-select-day {
+		transition: all 0.25s ease-out;
+		@apply d-gui-box-pull-sm active:d-gui-box-push-sm;
+	}
 </style>
