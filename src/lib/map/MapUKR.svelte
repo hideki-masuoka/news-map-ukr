@@ -1,16 +1,18 @@
 <script>
+	import { onMount } from 'svelte';
 	import { selectedArea, currentTweetId } from '$lib/area.js';
 	import groupedArea from '$lib/json/groupedArea.json';
 	import MapBase from '$lib/map/MapBase.svelte';
 	import MapOverlay from '$lib/map/MapOverlay.svelte';
 
+	import { tweetedAreas } from '$lib/tweet/getTweet.js';
 	import { assets } from '$app/paths';
 
 	const ukr_map = assets + '/Ukraine_adm_location_map.svg';
 	const ukr_map_name = assets + '/Ukraine_adm_location_map_areaname.svg';
 	const ukr_map_alt = 'ウクライナの地方行政区画地図';
 
-	const switchSelectedArea = (id) => {
+	const switchSelectedArea = (id, className = 'selected-area') => {
 		if ('UA-UKR' === id) {
 			id = false;
 		}
@@ -18,7 +20,7 @@
 			let target = document.getElementById(id);
 
 			if (target ?? false) {
-				target.classList.toggle('selected-area');
+				target.classList.toggle(className);
 			}
 			return true;
 		}
@@ -52,11 +54,21 @@
 		}
 	};
 
+	const setTweetedAreas = () => {
+		$tweetedAreas.forEach((id) => {
+			switchSelectedArea(id, 'tweeted-area');
+		});
+	};
+
 	$: {
 		clearSelectedArea();
 		switchSelectedAreas($selectedArea, $currentTweetId);
 		$currentTweetId = null;
 	}
+
+	onMount(() => {
+		setTweetedAreas();
+	});
 </script>
 
 <section class="map-ukr">
@@ -100,6 +112,12 @@
 			grid-area: map;
 			@apply inline;
 		}
+	}
+
+	:global(.tweeted-area) {
+		transition: all 0.25s;
+		opacity: 0.25 !important;
+		fill: #00ff00 !important;
 	}
 	:global(.selected-area) {
 		transition: all 0.25s;

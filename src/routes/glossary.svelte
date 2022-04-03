@@ -1,6 +1,9 @@
 <script>
 	import DaysPage from '$lib/DaysPage.svelte';
 	import { areaData, selectedArea, currentTweetId } from '$lib/area.js';
+	import { tweetedAreas } from '$lib/tweet/getTweet.js';
+
+	$tweetedAreas = [];
 
 	const pageTitle = '用語集';
 

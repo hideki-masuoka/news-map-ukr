@@ -1,5 +1,43 @@
+import { writable } from 'svelte/store';
 import alltweet from '$lib/json/tweet.json';
 //import details from '$lib/json/oembed.json';
+import groupedArea from '$lib/json/groupedArea.json';
+
+//現在のツイートで示されるエリアIDの配列
+export const tweetedAreas = writable([]);
+
+// ツイートIDを受け取ってエリアIDの配列を返す
+const getGroupedAreas = (id) => {
+	let arr = [];
+	if ((groupedArea[id] ?? false) && Array.isArray(groupedArea[id])) {
+		arr = groupedArea[id];
+	}
+	return arr;
+};
+
+// エリアIDををセットする
+const addTweetedArea = (id, area) => {
+	let grouped = getGroupedAreas(id);
+	let tmp = [];
+	tweetedAreas.subscribe((arr) => {
+		tmp = arr;
+	});
+	if (0 < grouped.length) {
+		Array.prototype.push.apply(tmp, grouped);
+	} else {
+		tmp.push(area);
+	}
+	tweetedAreas.set(tmp);
+};
+
+// エリアIDの重複を解消する
+const uniqueTweetedAreas = () => {
+	let tmp = [];
+	tweetedAreas.subscribe((arr) => {
+		tmp = [...new Set(arr)];
+	});
+	tweetedAreas.set(tmp);
+};
 
 const ksort = (a, b) => {
 	if (a > b) return -1;
@@ -9,6 +47,7 @@ const ksort = (a, b) => {
 
 export const getFromDate = (date, data) => {
 	let arr = [];
+	tweetedAreas.set([]);
 	Object.entries(alltweet)
 		.sort(ksort)
 		.forEach(([k, obj]) => {
@@ -18,7 +57,9 @@ export const getFromDate = (date, data) => {
 					area: obj.area,
 					embed: data[k] ?? {}
 				});
+				addTweetedArea(k, obj.area);
 			}
 		});
+	uniqueTweetedAreas();
 	return arr;
 };
