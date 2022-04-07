@@ -115,17 +115,17 @@
 	}
 
 	:global(.tweeted-area) {
-		transition: all 0.25s;
+		transition: all 0.5s;
 		opacity: 0.25 !important;
 		fill: #00ff00 !important;
 	}
 	:global(.selected-area) {
-		transition: all 0.25s;
+		transition: all 0.5s;
 		opacity: 0.75 !important;
 		fill: #ffff00 !important;
 	}
 	:global(#dnipro-ua.selected-area) {
-		transition: all 0.25s;
+		transition: all 0.5s;
 		fill: #0000ff !important;
 	}
 </style>

@@ -71,7 +71,10 @@
 </svelte:head>
 
 <main class="days-page">
-	<h1>{pageTitle}</h1>
+	<div class="page-title">
+		<h1>{pageTitle}</h1>
+		<span class="tweet-counter">({tweetdata.length} Tweet)</span>
+	</div>
 	<div class="clock">
 		<strong class="text-stone-800">現在時刻</strong>
 		<span class="text-stone-700 pl-4"
@@ -122,15 +125,24 @@
 				'clock title'
 				'map tweet'
 				'about tweet';
+			grid-template-columns: 1fr 32em;
 
 			@apply px-5;
 		}
 
-		h1 {
+		.page-title {
 			grid-area: title;
-			@apply font-bold text-base text-stone-700;
-			@screen md {
-				@apply text-2xl;
+			@apply text-base text-stone-700 flex;
+
+			h1 {
+				@apply font-bold;
+				@screen md {
+					@apply text-2xl;
+				}
+			}
+
+			.tweet-counter {
+				@apply inline-block ml-auto mr-0 pr-2 self-end;
 			}
 		}
 	}
