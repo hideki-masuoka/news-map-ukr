@@ -125,7 +125,7 @@ export const areaData = readable({
 	},
 	'UA-32-kyiv': {
 		id: 'UA-32-kyiv',
-		name: 'キエフ市',
+		name: 'キーウ市',
 		sort: '0'
 	},
 	'dnipro-ua': {
