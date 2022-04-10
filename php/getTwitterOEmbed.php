@@ -36,3 +36,5 @@ foreach($retdata as $k => $item) {
   ksort($item);
   file_put_contents($outputfilename . $k . ".json", json_encode($item, JSON_PRETTY_PRINT));
 }
+
+exit;
