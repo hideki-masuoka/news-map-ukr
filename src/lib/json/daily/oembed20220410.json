@@ -895,5 +895,31 @@
 		"provider_name": "Twitter",
 		"provider_url": "https://twitter.com",
 		"version": "1.0"
+	},
+	"1513301566115176457": {
+		"url": "https://twitter.com/UKRINFORM/status/1513301566115176457",
+		"author_name": "Ukrinform",
+		"author_url": "https://twitter.com/UKRINFORM",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"uk\" dir=\"ltr\">\u0412\u0435\u0440\u0435\u0449\u0443\u043a \u0440\u0430\u0434\u0438\u0442\u044c \u043d\u0435 \u043d\u0435\u0445\u0442\u0443\u0432\u0430\u0442\u0438 \u0437\u0430\u043a\u043b\u0438\u043a\u0430\u043c\u0438 \u0432\u043b\u0430\u0434\u0438 \u0434\u043e \u0435\u0432\u0430\u043a\u0443\u0430\u0446\u0456\u0457 \u0437 \u043d\u0435\u0431\u0435\u0437\u043f\u0435\u0447\u043d\u0438\u0445 \u0440\u0430\u0439\u043e\u043d\u0456\u0432 <a href=\"https://t.co/Lcnn5Qg24e\">https://t.co/Lcnn5Qg24e</a> <a href=\"https://t.co/YIuNQOKxBA\">pic.twitter.com/YIuNQOKxBA</a></p>&mdash; Ukrinform (@UKRINFORM) <a href=\"https://twitter.com/UKRINFORM/status/1513301566115176457?ref_src=twsrc%5Etfw\">April 10, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
+	},
+	"1513302054445334533": {
+		"url": "https://twitter.com/AFP/status/1513302054445334533",
+		"author_name": "AFP News Agency",
+		"author_url": "https://twitter.com/AFP",
+		"html": "<blockquote class=\"twitter-tweet\" align=\"center\" data-width=\"280\" data-dnt=\"true\"><p lang=\"en\" dir=\"ltr\">Inside a hospital train ferrying evacuees from eastern Ukraine, electrician Evhen Perepelytsia describes how he lost his leg -- and almost his life -- to shelling outside his home<br><br>Read more:<a href=\"https://t.co/3LHFyjQEGQ\">https://t.co/3LHFyjQEGQ</a> <a href=\"https://t.co/3c5ilNt6fK\">pic.twitter.com/3c5ilNt6fK</a></p>&mdash; AFP News Agency (@AFP) <a href=\"https://twitter.com/AFP/status/1513302054445334533?ref_src=twsrc%5Etfw\">April 10, 2022</a></blockquote>\n",
+		"width": 280,
+		"height": null,
+		"type": "rich",
+		"cache_age": "3153600000",
+		"provider_name": "Twitter",
+		"provider_url": "https://twitter.com",
+		"version": "1.0"
 	}
 }
