@@ -15,6 +15,13 @@ $tweetdata = json_decode($targetjson, true);
 
 $embedparams = "https://publish.twitter.com/oembed?maxwidth=280&hide_thread=t&omit_script=t&align=center&dnt=true&url=https%3A%2F%2Ftwitter.com%2Fname%2Fstatus%2F";
 
+$stream_context = stream_context_create(
+    ['ssl' => [
+        'verify_peer' => false,
+        'verify_peer_name' => false
+    ]]
+);
+
 $retdata = [];
 
 foreach($tweetdata as $k => $item) {
@@ -23,8 +30,10 @@ foreach($tweetdata as $k => $item) {
                  continue;
 }
   $tweetid = (string)$k;
-  $data = file_get_contents($embedparams . $tweetid);
+  $data = file_get_contents($embedparams . $tweetid, false, $stream_context);
   $retdata[$date][$k] = json_decode($data, true);
+
+  usleep(300000);
 }
 
 if (empty($retdata)) {
