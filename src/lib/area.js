@@ -152,6 +152,11 @@ export const areaData = readable({
 		id: 'UA-UKR',
 		name: 'ウクライナ',
 		sort: '100'
+	},
+	'MD-Transnistria': {
+		id: 'MD-Transnistria',
+		name: 'トランスニストリア：モルドバ',
+		sort: '1000'
 	}
 });
 
