@@ -133,7 +133,7 @@
 		}
 
 		.header-nav {
-			@apply flex flex-wrap items-end justify-start gap-4 text-base mb-4;
+			@apply flex flex-wrap items-center justify-start gap-2 text-base mb-0 px-4 py-0;
 
 			@screen md {
 				flex-grow: 1;
@@ -141,7 +141,7 @@
 			}
 			.menu-button {
 				transition: all 0.125s ease-out;
-				@apply py-2 px-4 rounded-full font-bold text-stone-500 d-gui-box-pull-sm active:d-gui-box-push-sm text-md;
+				@apply rounded-full font-bold text-stone-500 text-md;
 				@screen md {
 					@apply mr-5;
 				}
@@ -150,9 +150,9 @@
 
 		.header-external-link {
 			transition: all 0.125s ease-out;
-			@apply inline-flex items-center rounded-full py-2 px-4 font-bold text-stone-500 mt-2 d-gui-box-pull-sm active:d-gui-box-push-sm;
+			@apply inline-flex items-center rounded-full py-2 px-4 font-bold text-stone-500 mt-0 mb-4;
 			@screen md {
-				@apply mt-0 ml-auto mr-0;
+				@apply mt-0 mb-0 ml-auto mr-0;
 			}
 		}
 

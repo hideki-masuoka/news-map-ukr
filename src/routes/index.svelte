@@ -8,3 +8,6 @@
 </script>
 
 <DaysPage {tweetdata} {pageTitle} embed={false} />
+
+<style>
+</style>

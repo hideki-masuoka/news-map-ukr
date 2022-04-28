@@ -5,7 +5,7 @@ module.exports = {
 		plugin(function ({ addComponents }) {
 			addComponents({
 				'.d-gui-box': {
-					boxShadow: '-8px -8px 10px rgba(255,255,255,0.5), 8px 8px 10px rgba(0,0,0,0.125)',
+					boxShadow: '-8px -8px 10px rgba(255,255,255,0.75), 8px 8px 10px rgba(0,0,0,0.125)',
 					borderWidth: '0px',
 					padding: '1rem'
 				},
@@ -19,11 +19,11 @@ module.exports = {
 				},
 				'.d-gui-box-push': {
 					boxShadow:
-						'inset -8px -8px 10px rgba(255,255,255,0.5), inset 8px 8px 10px rgba(0,0,0,0.125)'
+						'inset -8px -8px 10px rgba(255,255,255,0.75), inset 8px 8px 10px rgba(0,0,0,0.125)'
 				},
 				'.d-gui-box-push-sm': {
 					boxShadow:
-						'inset -3px -3px 4px rgba(255,255,255,0.5), inset 3px 3px 4px rgba(0,0,0,0.125)',
+						'inset -3px -3px 4px rgba(255,255,255,0.75), inset 3px 3px 4px rgba(0,0,0,0.125)',
 					paddingTop: '0.5rem',
 					paddingBottom: '0'
 				},
@@ -35,11 +35,11 @@ module.exports = {
 				},
 				'.d-gui-box-pull': {
 					boxShadow:
-						'-8px -8px 10px rgba(255,255,255,0.5), 8px 8px 10px rgba(0,0,0,0.125), inset -6px -6px 8px rgba(0,0,0,0.25), inset 6px 6px 10px rgba(255,255,255,0.5)'
+						'-8px -8px 10px rgba(255,255,255,0.9), 8px 8px 10px rgba(0,0,0,0.1), inset -6px -6px 8px rgba(0,0,0,0.125), inset 6px 6px 10px rgba(255,255,255,0.9)'
 				},
 				'.d-gui-box-pull-sm': {
 					boxShadow:
-						'-4px -4px 5px rgba(255,255,255,0.5), 4px 4px 5px rgba(0,0,0,0.125), inset -3px -3px 4px rgba(0,0,0,0.25), inset 3px 3px 4px rgba(255,255,255,0.5)',
+						'-4px -4px 9px rgba(255,255,255,0.9), 4px 4px 9px rgba(0,0,0,0.1), inset -3px -3px 9px rgba(0,0,0,0.125), inset 3px 3px 9px rgba(255,255,255,0.9)',
 					paddingTop: '0.25rem',
 					paddingBottom: '0.25rem'
 				},
