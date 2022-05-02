@@ -7,7 +7,7 @@
 	const tweetdata = getFromDate('20220502', jsonData);
 </script>
 
-<DaysPage {tweetdata} {pageTitle} embed={false} />
+<DaysPage {pageTitle} {tweetdata} embed={false} />
 
 <style>
 </style>

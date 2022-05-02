@@ -1,6 +1,4 @@
 import { writable } from 'svelte/store';
-import alltweet from '$lib/json/tweet.json';
-//import details from '$lib/json/oembed.json';
 import groupedArea from '$lib/json/groupedArea.json';
 
 //現在のツイートで示されるエリアIDの配列
@@ -45,8 +43,10 @@ const ksort = (a, b) => {
 	return 0;
 };
 
-export const getFromDate = (date, data) => {
+export const getFromDate = async (date, data) => {
 	let arr = [];
+	const jsonData = await import('../json/tweet.json');
+	const alltweet = jsonData.default ?? {};
 	tweetedAreas.set([]);
 	Object.entries(alltweet)
 		.sort(ksort)

@@ -2,8 +2,8 @@
 	import { page } from '$app/stores';
 	import { DateTime } from 'luxon';
 	import OEmbedTweet from '$lib/tweet/OEmbedTweet.svelte';
-	import EmbedTweet from '$lib/tweet/embedTweet.svelte';
 	import MapUKR from '$lib/map/MapUKR.svelte';
+
 	import AreaInfo from '$lib/AreaInfo.svelte';
 	import About from '$lib/About.svelte';
 	import { SITE_META } from '$lib/siteMeta.js';
@@ -73,7 +73,9 @@
 <main class="days-page">
 	<div class="page-title">
 		<h1>{pageTitle}</h1>
-		<span class="tweet-counter">({tweetdata.length} Tweet)</span>
+		{#await tweetdata then tweetdata}
+			<span class="tweet-counter">({tweetdata.length} Tweet)</span>
+		{/await}
 	</div>
 	<div class="clock">
 		<strong class="text-stone-800">現在時刻</strong>
@@ -95,10 +97,10 @@
 	<section class="tweet-list">
 		{#if 'Glossary' === embed}
 			<slot name="glossaly" />
-		{:else if true === embed}
-			<EmbedTweet {tweetdata} />
 		{:else}
-			<OEmbedTweet {tweetdata} />
+			{#await tweetdata then tweetdata}
+				<OEmbedTweet {tweetdata} />
+			{/await}
 		{/if}
 	</section>
 	<section class="site-about">

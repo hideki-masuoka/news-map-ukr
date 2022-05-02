@@ -1,8 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
 	import { selectedArea, currentTweetId } from '$lib/area.js';
 	import groupedArea from '$lib/json/groupedArea.json';
-	import MapBase from '$lib/map/MapBase.svelte';
 	import MapOverlay from '$lib/map/MapOverlay.svelte';
 
 	import { tweetedAreas } from '$lib/tweet/getTweet.js';
@@ -54,8 +52,8 @@
 		}
 	};
 
-	const setTweetedAreas = () => {
-		$tweetedAreas.forEach((id) => {
+	const setTweetedAreas = (areas) => {
+		areas.forEach((id) => {
 			switchSelectedArea(id, 'tweeted-area');
 		});
 	};
@@ -66,9 +64,9 @@
 		$currentTweetId = null;
 	}
 
-	onMount(() => {
-		setTweetedAreas();
-	});
+	$: {
+		setTweetedAreas($tweetedAreas);
+	}
 </script>
 
 <section class="map-ukr">
