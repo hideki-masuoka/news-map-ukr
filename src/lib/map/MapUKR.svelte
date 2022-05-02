@@ -1,7 +1,7 @@
 <script>
 	import { selectedArea, currentTweetId } from '$lib/area.js';
 	import groupedArea from '$lib/json/groupedArea.json';
-	import MapOverlay from '$lib/map/MapOverlay.svelte';
+	//import MapOverlay from '$lib/map/MapOverlay.svelte';
 
 	import { tweetedAreas } from '$lib/tweet/getTweet.js';
 	import { assets } from '$app/paths';
@@ -11,6 +11,9 @@
 	const ukr_map_alt = 'ウクライナの地方行政区画地図';
 
 	const switchSelectedArea = (id, className = 'selected-area') => {
+		if (typeof document === 'undefined') {
+			return false;
+		}
 		if ('UA-UKR' === id) {
 			id = false;
 		}
@@ -53,9 +56,11 @@
 	};
 
 	const setTweetedAreas = (areas) => {
-		areas.forEach((id) => {
-			switchSelectedArea(id, 'tweeted-area');
-		});
+		if (Symbol.iterator in Object(areas)) {
+			areas.forEach((id) => {
+				switchSelectedArea(id, 'tweeted-area');
+			});
+		}
 	};
 
 	$: {
@@ -67,6 +72,10 @@
 	$: {
 		setTweetedAreas($tweetedAreas);
 	}
+
+	const initOverlay = () => {
+		setTweetedAreas($tweetedAreas);
+	};
 </script>
 
 <section class="map-ukr">
@@ -86,7 +95,10 @@
 		enable-background="new 0 0 1545.703 1038.492"
 		xml:space="preserve"
 	>
-		<MapOverlay />
+		{#await import('./MapOverlay.svelte') then component}
+			<svelte:component this={component.default} />
+			<br style="display:none" use:initOverlay />
+		{/await}
 	</svg>
 	<img class="map-name" src={ukr_map_name} alt={ukr_map_alt} />
 </section>
