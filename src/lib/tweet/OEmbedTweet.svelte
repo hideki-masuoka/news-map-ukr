@@ -121,7 +121,7 @@
 		}
 		.view-area {
 			transition: all 0.125s ease-out;
-			@apply mb-0 md:mb-4 d-gui-box-pull-sm;
+			@apply mb-4 d-gui-box-pull-sm text-stone-600;
 			&:active {
 				@apply d-gui-box-push-sm;
 			}

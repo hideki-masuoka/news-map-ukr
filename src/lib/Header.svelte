@@ -33,7 +33,7 @@
 					stroke-linecap="round"
 					stroke-linejoin="round"
 					stroke-width="2"
-					class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+					class="w-10 h-10 text-white p-2 bg-stone-500 rounded-full"
 					viewBox="0 0 24 24"
 				>
 					<path
@@ -109,7 +109,7 @@
 
 <style lang="windicss">
 	.site-header {
-		@apply text-gray-600 body-font;
+		@apply text-stone-600 body-font;
 
 		.header-contents {
 			@apply container mx-auto flex flex-wrap p-2 flex-col items-center;
@@ -119,7 +119,7 @@
 		}
 
 		.header-title {
-			@apply flex title-font items-left w-full text-gray-900 mb-2;
+			@apply flex title-font items-left w-full text-stone-900 mb-2;
 			@screen md {
 				@apply w-auto mb-0;
 			}

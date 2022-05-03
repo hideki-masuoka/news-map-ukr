@@ -69,10 +69,10 @@
 
 <style lang="windicss">
 	.monthly {
-		@apply flex flex-wrap justify-left gap-x-2 gap-y-2 rounded-md mt-2 d-gui-box-push-sm p-4 bg-stone-100;
+		@apply flex flex-wrap justify-left gap-x-2 gap-y-2 rounded-md mt-2 d-gui-box-push-sm p-2 md:p-4 bg-stone-100;
 	}
 	.button-select-day {
 		transition: all 0.25s ease-out;
-		@apply d-gui-box-sm active:d-gui-box-push-sm;
+		@apply d-gui-box-sm active:d-gui-box-push-sm text-xs md:text-base;
 	}
 </style>
