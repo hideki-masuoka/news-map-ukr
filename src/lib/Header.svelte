@@ -33,7 +33,7 @@
 					stroke-linecap="round"
 					stroke-linejoin="round"
 					stroke-width="2"
-					class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+					class="w-10 h-10 text-white p-2 bg-stone-500 rounded-full"
 					viewBox="0 0 24 24"
 				>
 					<path
@@ -68,12 +68,17 @@
 						class="menu-button">2022年3月</button
 					>
 					<button
-						disabled
 						on:click={() => {
-							return;
 							openmenu(4);
 						}}
 						class="menu-button">2022年4月</button
+					>
+
+					<button
+						on:click={() => {
+							openmenu(5);
+						}}
+						class="menu-button">2022年5月</button
 					>
 					<a class="menu-button" href="/glossary/">用語集</a>
 				</Modal>
@@ -104,7 +109,7 @@
 
 <style lang="windicss">
 	.site-header {
-		@apply text-gray-600 body-font;
+		@apply text-stone-600 body-font;
 
 		.header-contents {
 			@apply container mx-auto flex flex-wrap p-2 flex-col items-center;
@@ -114,7 +119,7 @@
 		}
 
 		.header-title {
-			@apply flex title-font items-left w-full text-gray-900 mb-2;
+			@apply flex title-font items-left w-full text-stone-900 mb-2;
 			@screen md {
 				@apply w-auto mb-0;
 			}
@@ -135,14 +140,15 @@
 		}
 
 		.header-nav {
-			@apply flex flex-wrap items-end justify-start gap-4 text-base mb-4;
+			@apply flex flex-wrap items-center justify-start gap-2 text-base mb-0 px-4 py-0;
 
 			@screen md {
 				flex-grow: 1;
 				@apply justify-start mr-0 ml-4 py-1 pl-4 gap-0;
 			}
 			.menu-button {
-				@apply py-2 px-4 rounded-full font-bold text-stone-500 d-gui-box-pull-sm active:d-gui-box-push-sm text-md;
+				transition: all 0.125s ease-out;
+				@apply rounded-full font-bold text-stone-500 text-md;
 				@screen md {
 					@apply mr-5;
 				}
@@ -150,9 +156,10 @@
 		}
 
 		.header-external-link {
-			@apply inline-flex items-center rounded-full py-2 px-4 font-bold text-stone-500 mt-2 d-gui-box-pull-sm active:d-gui-box-push-sm;
+			transition: all 0.125s ease-out;
+			@apply inline-flex items-center rounded-full py-2 px-4 font-bold text-stone-500 mt-0 mb-4;
 			@screen md {
-				@apply mt-0 ml-auto mr-0;
+				@apply mt-0 mb-0 ml-auto mr-0;
 			}
 		}
 

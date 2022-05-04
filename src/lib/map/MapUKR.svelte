@@ -1,16 +1,19 @@
 <script>
 	import { selectedArea, currentTweetId } from '$lib/area.js';
 	import groupedArea from '$lib/json/groupedArea.json';
-	import MapBase from '$lib/map/MapBase.svelte';
-	import MapOverlay from '$lib/map/MapOverlay.svelte';
+	//import MapOverlay from '$lib/map/MapOverlay.svelte';
 
+	import { tweetedAreas } from '$lib/tweet/getTweet.js';
 	import { assets } from '$app/paths';
 
 	const ukr_map = assets + '/Ukraine_adm_location_map.svg';
 	const ukr_map_name = assets + '/Ukraine_adm_location_map_areaname.svg';
 	const ukr_map_alt = 'ウクライナの地方行政区画地図';
 
-	const switchSelectedArea = (id) => {
+	const switchSelectedArea = (id, className = 'selected-area') => {
+		if (typeof document === 'undefined') {
+			return false;
+		}
 		if ('UA-UKR' === id) {
 			id = false;
 		}
@@ -18,7 +21,7 @@
 			let target = document.getElementById(id);
 
 			if (target ?? false) {
-				target.classList.toggle('selected-area');
+				target.classList.toggle(className);
 			}
 			return true;
 		}
@@ -52,11 +55,27 @@
 		}
 	};
 
+	const setTweetedAreas = (areas) => {
+		if (Symbol.iterator in Object(areas)) {
+			areas.forEach((id) => {
+				switchSelectedArea(id, 'tweeted-area');
+			});
+		}
+	};
+
 	$: {
 		clearSelectedArea();
 		switchSelectedAreas($selectedArea, $currentTweetId);
 		$currentTweetId = null;
 	}
+
+	$: {
+		setTweetedAreas($tweetedAreas);
+	}
+
+	const initOverlay = () => {
+		setTweetedAreas($tweetedAreas);
+	};
 </script>
 
 <section class="map-ukr">
@@ -76,7 +95,10 @@
 		enable-background="new 0 0 1545.703 1038.492"
 		xml:space="preserve"
 	>
-		<MapOverlay />
+		{#await import('./MapOverlay.svelte') then component}
+			<svelte:component this={component.default} />
+			<br style="display:none" use:initOverlay />
+		{/await}
 	</svg>
 	<img class="map-name" src={ukr_map_name} alt={ukr_map_alt} />
 </section>
@@ -101,13 +123,19 @@
 			@apply inline;
 		}
 	}
+
+	:global(.tweeted-area) {
+		transition: all 0.5s;
+		opacity: 0.25 !important;
+		fill: #00ff00 !important;
+	}
 	:global(.selected-area) {
-		transition: all 0.25s;
+		transition: all 0.5s;
 		opacity: 0.75 !important;
 		fill: #ffff00 !important;
 	}
 	:global(#dnipro-ua.selected-area) {
-		transition: all 0.25s;
+		transition: all 0.5s;
 		fill: #0000ff !important;
 	}
 </style>

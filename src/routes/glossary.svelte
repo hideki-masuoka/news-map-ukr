@@ -1,6 +1,9 @@
 <script>
 	import DaysPage from '$lib/DaysPage.svelte';
 	import { areaData, selectedArea, currentTweetId } from '$lib/area.js';
+	import { tweetedAreas } from '$lib/tweet/getTweet.js';
+
+	$tweetedAreas = [];
 
 	const pageTitle = '用語集';
 
@@ -24,6 +27,12 @@
 	};
 
 	const items = {
+		'%E6%B2%BF%E3%83%89%E3%83%8B%E3%82%A8%E3%82%B9%E3%83%88%E3%83%AB%E5%85%B1%E5%92%8C%E5%9B%BD': {
+			title: 'トランスニストリア',
+			area: 'MD-Transnistria',
+			description:
+				'モルドバ東部を流れるドニエストル川とウクライナ国境との間の細長い土地にあり、国際的にはモルドバの一部と広く認められている分離国家。モルドバ共和国のドニエストル川東岸からウクライナとの国境までの南北に細長い地域を主な領土としている。なお、川は直線ではなく蛇行しており、ウクライナとの国境は直線でジグザグした部分も多い。'
+		},
 		Melitopol: {
 			title: 'メリトポリ',
 			area: 'UA-23',
@@ -62,7 +71,7 @@
 		'Bucha,_Kyiv_Oblast': {
 			title: 'ブチャ',
 			area: 'UA-32',
-			description: 'キエフ州にある都市',
+			description: 'キーウ州にある都市',
 			lang: 'en'
 		},
 		Enerhodar: {
