@@ -2,8 +2,9 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { writable } from 'svelte/store';
-	import Modal, { bind } from 'svelte-simple-modal';
-	import ListMonthly from '$lib/ListMonthly.svelte';
+	import Modal from 'svelte-simple-modal';
+  import { bind } from 'svelte-simple-modal/src/Modal.svelte';
+  import ListMonthly from '$lib/ListMonthly.svelte';
 	import { SITE_META } from '$lib/siteMeta.js';
 
 	const modal = writable(null);
