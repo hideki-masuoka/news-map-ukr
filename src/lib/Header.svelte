@@ -50,11 +50,7 @@
 				>
 				<span class="site-title">{$SITE_META.title}</span>
 			</a>
-			<button
-          class="toggle-nav-drawer"
-          bind:this={toggleNavDrawer}
-          on:click={handleToggleDrawer}
-      >
+			<button class="toggle-nav-drawer" bind:this={toggleNavDrawer} on:click={handleToggleDrawer}>
 				<svg viewBox="0 0 24 24" fill="currentColor"
 					><path
 						d="M10.5,12A1.5,1.5 0 0,1 12,10.5A1.5,1.5 0 0,1 13.5,12A1.5,1.5 0 0,
