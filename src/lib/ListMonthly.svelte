@@ -53,7 +53,7 @@
 {:else if 5 === monthNum}
 	<strong>2022年5月</strong>
 	<ul class="monthly">
-		{#each [...Array(20).keys()] as dayNum}
+		{#each [...Array(21).keys()] as dayNum}
 			<li class="d-gui-chips button-select-day">
 				<svg fill="currentColor" viewBox="0 0 24 24"
 					><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg
