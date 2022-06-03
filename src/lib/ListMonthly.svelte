@@ -1,4 +1,5 @@
 <script>
+	import ListMonthlyComponent from '$lib/components/ListMonthlyComponent.svelte';
 	import { getContext } from 'svelte';
 	const { close } = getContext('simple-modal');
 
@@ -63,6 +64,8 @@
 		{/each}
 		<li class="d-gui-spacer">&nbsp;</li>
 	</ul>
+{:else if 6 === monthNum}
+	<ListMonthlyComponent listTitle="2022年6月" listDays="1" listMonth="d202206" />
 {:else}
 	<p>Not Found</p>
 {/if}
