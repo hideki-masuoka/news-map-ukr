@@ -16,7 +16,7 @@
 
 <strong>{listTitle}</strong>
 <ul class="monthly">
-	{#each [...Array(listDays).keys()] as dayNum}
+	{#each [...Array(Number(listDays)).keys()] as dayNum}
 		<li class="d-gui-chips button-select-day">
 			<svg fill="currentColor" viewBox="0 0 24 24"
 				><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg
