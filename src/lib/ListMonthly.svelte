@@ -65,7 +65,7 @@
 		<li class="d-gui-spacer">&nbsp;</li>
 	</ul>
 {:else if 6 === monthNum}
-	<ListMonthlyComponent listTitle="2022年6月" listDays="2" listMonth="d202206" />
+	<ListMonthlyComponent listTitle="2022年6月" listDays="3" listMonth="d202206" />
 {:else}
 	<p>Not Found</p>
 {/if}
