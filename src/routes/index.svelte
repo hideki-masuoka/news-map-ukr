@@ -1,10 +1,10 @@
 <script>
 	import DaysPage from '$lib/DaysPage.svelte';
 	import { getFromDate } from '$lib/tweet/getTweet.js';
-	import jsonData from '$lib/json/daily/oembed20220616.json';
+	import jsonData from '$lib/json/daily/oembed20220617.json';
 
 	const pageTitle = 'News';
-	const tweetdata = getFromDate('20220616', jsonData);
+	const tweetdata = getFromDate('20220617', jsonData);
 </script>
 
 <DaysPage {pageTitle} {tweetdata} embed={false} />
