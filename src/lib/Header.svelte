@@ -100,6 +100,12 @@
 						}}
 						class="menu-button">2022年6月</button
 					>
+					<button
+						on:click={() => {
+							openmenu(7);
+						}}
+						class="menu-button">2022年7月</button
+					>
 					<a class="menu-button" href="/glossary/">用語集</a>
 				</Modal>
 				<a
