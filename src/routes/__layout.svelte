@@ -3,16 +3,12 @@
 	import 'virtual:windi.css';
 	import Header from '$lib/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
-
-	const USE_GTM = false;
+	import { GOAT_COUNTER, USE_GTM } from '$lib/siteMeta.js';
 </script>
 
 <svelte:head>
 	{#if !dev}
-		<script
-			data-goatcounter="https://hansendo.goatcounter.com/count"
-			async
-			src="//gc.zgo.at/count.js"></script>
+		<script data-goatcounter={GOAT_COUNTER} async src="//gc.zgo.at/count.js"></script>
 		{#if USE_GTM}
 			<!-- Google Tag Manager -->
 			<script>
