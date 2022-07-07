@@ -1,3 +1,4 @@
+import { dev } from '$app/env';
 import { readable } from 'svelte/store';
 
 export const SITE_META = readable({
@@ -9,3 +10,6 @@ export const SITE_META = readable({
 	hosting: 'https://news-map-ukr.web.app',
 	lastupdate: '2022-07-07 16:17'
 });
+
+export const GOAT_COUNTER = dev ? '' : import.meta.env.VITE_GOAT_COUNTER;
+export const USE_GTM = 'true' === import.meta.env.VITE_USE_GOOGLE_TAG_MANAGER ? true : false;
