@@ -3,11 +3,8 @@
 	import { getFromDate } from '$lib/tweet/getTweet.js';
 	import jsonData from '$lib/json/daily/oembed20220722.json';
 
-	const pageTitle = 'News';
+	const pageTitle = '2022年7月21日';
 	const tweetdata = getFromDate('20220722', jsonData);
 </script>
 
-<DaysPage {pageTitle} {tweetdata} embed={false} />
-
-<style>
-</style>
+<DaysPage {tweetdata} {pageTitle} embed={false} />
