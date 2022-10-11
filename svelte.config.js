@@ -8,17 +8,10 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: '200.html',
+			fallback: null,
 			precompress: true
 		}),
-		prerender: {
-			default: true,
-			enabled: true
-		},
-		trailingSlash: 'always',
-		vite: {
-			plugins: [WindiCSS()]
-		}
+		trailingSlash: 'always'
 	}
 };
 

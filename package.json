@@ -1,6 +1,7 @@
 {
 	"name": "news-map-ukr",
 	"version": "1.8.2",
+  "private":"true",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

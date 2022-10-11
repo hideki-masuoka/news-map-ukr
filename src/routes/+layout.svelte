@@ -1,5 +1,5 @@
 <script>
-	import { dev } from '$app/env';
+	import { dev } from '$app/environment';
 	import 'virtual:windi.css';
 	import Header from '$lib/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
