@@ -67,50 +67,51 @@
 		{#if drawerVisible}
 			<nav class="header-nav" transition:fly={{ x: -120 }}>
 				<Modal show={$modal}>
+					<strong>2022年：</strong>
 					<button
 						on:click={() => {
 							openmenu(2);
 						}}
 						class="menu-button"
 					>
-						2022年2月
+						2月
 					</button>
 					<button
 						on:click={() => {
 							openmenu(3);
 						}}
-						class="menu-button">2022年3月</button
+						class="menu-button">3月</button
 					>
 					<button
 						on:click={() => {
 							openmenu(4);
 						}}
-						class="menu-button">2022年4月</button
+						class="menu-button">4月</button
 					>
 
 					<button
 						on:click={() => {
 							openmenu(5);
 						}}
-						class="menu-button">2022年5月</button
+						class="menu-button">5月</button
 					>
 					<button
 						on:click={() => {
 							openmenu(6);
 						}}
-						class="menu-button">2022年6月</button
+						class="menu-button">6月</button
 					>
 					<button
 						on:click={() => {
 							openmenu(7);
 						}}
-						class="menu-button">2022年7月</button
+						class="menu-button">7月</button
 					>
 					<button
 						on:click={() => {
 							openmenu(8);
 						}}
-						class="menu-button">2022年8月</button
+						class="menu-button">8月</button
 					>
 					<a class="menu-button" href="/glossary/">用語集</a>
 				</Modal>

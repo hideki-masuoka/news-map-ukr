@@ -18,7 +18,14 @@ export async function load({ params }) {
 		let dateText = params.slug.replace('d', '');
 		return {
 			contents: jsonData,
-			dateText: dateText
+			dateText: dateText,
+			title:
+				dateText.substring(0, 4) +
+				'年' +
+				dateText.substring(4, 6) +
+				'月' +
+				dateText.substring(6) +
+				'日'
 		};
 	} catch (e) {
 		throw error(404, 'Not found');
