@@ -5,9 +5,9 @@
 	import { getFromDate } from '$lib/tweet/getTweet.js';
 
 	const pageTitle = data.dateText;
-//console.log(data.contents);
+	//console.log(data.contents);
 	const tweetdata = getFromDate(data.dateText, data.contents);
-//  const tweetdata = getFromDate(data.dateText, contentsJson);
+	//  const tweetdata = getFromDate(data.dateText, contentsJson);
 </script>
 
 <DaysPage {tweetdata} {pageTitle} embed={false} />
