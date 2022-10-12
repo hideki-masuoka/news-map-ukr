@@ -37,6 +37,10 @@
 	<ListMonthlyComponent listTitle="2022年7月" listDays="31" listMonth="d202207" />
 {:else if 8 === monthNum}
 	<ListMonthlyComponent listTitle="2022年8月" listDays="31" listMonth="d202208" />
+{:else if 9 === monthNum}
+	<ListMonthlyComponent listTitle="2022年9月" listDays="30" listMonth="d202209" />
+{:else if 10 === monthNum}
+	<ListMonthlyComponent listTitle="2022年10月" listDays="11" listMonth="d202210" />
 {:else}
 	<p>Not Found</p>
 {/if}
