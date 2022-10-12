@@ -1,7 +1,7 @@
 {
 	"name": "news-map-ukr",
 	"version": "1.8.2",
-  "private":"true",
+	"private": "true",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-static": "^1.0.0-next.29",
+		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
 		"eslint": "^8.14.0",
 		"eslint-config-prettier": "^8.5.0",
