@@ -4,13 +4,14 @@
 	export let listMonth = '';
 
 	import { getContext } from 'svelte';
+	import { base } from '$app/paths';
 	const { close } = getContext('simple-modal');
 
 	const toDayStr = (num) => {
 		return String(num + 1).padStart(2, '0');
 	};
 	const modalClose = () => {
-		close();
+		//		close();
 	};
 </script>
 
@@ -21,7 +22,9 @@
 			<svg fill="currentColor" viewBox="0 0 24 24"
 				><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg
 			>
-			<a href="/days/{listMonth}{toDayStr(dayNum)}/" on:click={modalClose}>{toDayStr(dayNum)}日</a>
+			<a target="_self" href="{base}/days/{listMonth}{toDayStr(dayNum)}/" on:click={modalClose}
+				>{toDayStr(dayNum)}日</a
+			>
 		</li>
 	{/each}
 	<li class="d-gui-spacer">&nbsp;</li>

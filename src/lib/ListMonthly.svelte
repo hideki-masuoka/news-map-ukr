@@ -20,7 +20,9 @@
 				<svg fill="currentColor" viewBox="0 0 24 24"
 					><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg
 				>
-				<a href="/days/d202202{toDayStr(dayNum)}/" on:click={modalClose}>{toDayStr(dayNum)}日</a>
+				<a target="_self" href="/days/d202202{toDayStr(dayNum)}/" on:click={modalClose}
+					>{toDayStr(dayNum)}日</a
+				>
 			</li>
 		{/each}
 		<li class="d-gui-spacer">&nbsp;</li>
@@ -34,7 +36,13 @@
 {:else if 6 === monthNum}
 	<ListMonthlyComponent listTitle="2022年6月" listDays="30" listMonth="d202206" />
 {:else if 7 === monthNum}
-	<ListMonthlyComponent listTitle="2022年7月" listDays="6" listMonth="d202207" />
+	<ListMonthlyComponent listTitle="2022年7月" listDays="31" listMonth="d202207" />
+{:else if 8 === monthNum}
+	<ListMonthlyComponent listTitle="2022年8月" listDays="31" listMonth="d202208" />
+{:else if 9 === monthNum}
+	<ListMonthlyComponent listTitle="2022年9月" listDays="30" listMonth="d202209" />
+{:else if 10 === monthNum}
+	<ListMonthlyComponent listTitle="2022年10月" listDays="11" listMonth="d202210" />
 {:else}
 	<p>Not Found</p>
 {/if}
