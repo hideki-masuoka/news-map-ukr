@@ -125,6 +125,12 @@
 						}}
 						class="menu-button">10月</button
 					>
+					<button
+						on:click={() => {
+							openmenu(11);
+						}}
+						class="menu-button">11月</button
+					>
 					<a class="menu-button" href="/glossary/">用語集</a>
 				</Modal>
 				<a
