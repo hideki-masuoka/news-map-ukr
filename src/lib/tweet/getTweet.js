@@ -1,4 +1,5 @@
-import { writable } from 'svelte/store';
+import { writable, get } from 'svelte/store';
+import { dbGetTweetIdsByMonth } from '$lib/components/CroudRun.js';
 import groupedArea from '$lib/json/groupedArea.json';
 
 //現在のツイートで示されるエリアIDの配列
@@ -43,10 +44,16 @@ const ksort = (a, b) => {
 	return 0;
 };
 
-export const getFromDate = async (date, data) => {
+export const getFromDate = async (date, data, fromDB = false) => {
 	let arr = [];
-	const jsonData = await import('../json/tweet.json');
-	const alltweet = jsonData.default ?? {};
+  let alltweet;
+    if(!fromDB) {
+	      const jsonData = await import('../json/tweet.json');
+	      alltweet = jsonData.default ?? {};
+        
+    } else {
+        alltweet = await dbGetTweetIdsByMonth(date);
+    }
 	tweetedAreas.set([]);
 	Object.entries(alltweet)
 		.sort(ksort)
