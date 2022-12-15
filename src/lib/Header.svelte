@@ -144,7 +144,7 @@
 					href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E3%81%AE%E5%9C%B0%E6%96%B9%E8%A1%8C%E6%94%BF%E5%8C%BA%E7%94%BB"
 					title="ウクライナの地方行政区画 - Wikipedia"
 					target="_blank"
-					rel="noreferer"
+					rel="noreferrer"
 				>
 					ウクライナの地方行政区画
 					<svg
