@@ -12,7 +12,7 @@
 		<a
 			href="https://wartoday.info"
 			target="_blank"
-      rel="noreferrer"
+			rel="noreferrer"
 			title="ロシアの大規模なウクライナ侵攻事件に関する情報を掲載したインタラクティブマップ"
 			>wartoday.info</a
 		>
