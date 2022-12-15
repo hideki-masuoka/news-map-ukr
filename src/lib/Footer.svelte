@@ -37,7 +37,7 @@
 			- {$SITE_META.lastupdate} - 更新
 		</p>
 		<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-			<a class="text-gray-500" href={$SITE_META.repo} target="_blank" rel="noopener">
+			<a class="text-gray-500" href={$SITE_META.repo} target="_blank" rel="noreferrer">
 				<svg fill="currentColor" stroke="none" width="24" height="24" viewBox="0 0 24 24"
 					><path
 						d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,

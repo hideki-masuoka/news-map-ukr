@@ -9,8 +9,7 @@ const config = {
 			assets: 'build',
 			fallback: null,
 			precompress: true
-		}),
-		trailingSlash: 'always'
+		})
 	}
 };
 
