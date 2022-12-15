@@ -1,22 +1,33 @@
-import { writable, get } from 'svelte/store';
-import { dbGetTweetIdsByMonth } from '$lib/components/CroudRun.js';
-import groupedArea from '$lib/json/groupedArea.json';
+import { writable } from 'svelte/store';
+import { dbGetTweetIdsByMonth, dbGetGroupedArea, dbGetAllGroupedArea } from '$lib/components/CroudRun.js';
+// import groupedArea from '$lib/json/groupedArea.json';
 
 //現在のツイートで示されるエリアIDの配列
 export const tweetedAreas = writable([]);
 
+const GroupedArea = dbGetAllGroupedArea();
+//console.log(GroupedArea);
+
 // ツイートIDを受け取ってエリアIDの配列を返す
-const getGroupedAreas = (id) => {
+const getGroupedAreas = async (id, fromDB = false) => {
 	let arr = [];
-	if ((groupedArea[id] ?? false) && Array.isArray(groupedArea[id])) {
-		arr = groupedArea[id];
-	}
+  let groupedArea;
+    if (fromDB){
+        arr = await dbGetGroupedArea(id);
+        arr = arr ? arr : [];
+    } else {
+        // groupedArea =  await import('../json/groupedArea.json');
+        groupedArea = await GroupedArea;
+	      if ((groupedArea[id] ?? false) && Array.isArray(groupedArea[id])) {
+		        arr = groupedArea[id];
+	      }
+    }
 	return arr;
 };
 
 // エリアIDををセットする
 const addTweetedArea = (id, area) => {
-	let grouped = getGroupedAreas(id);
+ let grouped = getGroupedAreas(id);
 	let tmp = [];
 	tweetedAreas.subscribe((arr) => {
 		tmp = arr;
@@ -59,12 +70,15 @@ export const getFromDate = async (date, data, fromDB = false) => {
 		.sort(ksort)
 		.forEach(([k, obj]) => {
 			if (date === obj.date) {
-				arr.push({
-					id: k,
-					area: obj.area,
-					embed: data[k] ?? {}
-				});
-				addTweetedArea(k, obj.area);
+          if(data[k] ?? false) {
+				      arr.push({
+					        id: k,
+					        area: obj.area,
+					        embed: data[k] ?? {}
+				      });
+				      addTweetedArea(k, obj.area);
+              
+          }
 			}
 		});
 	uniqueTweetedAreas();
