@@ -64,7 +64,7 @@ export const getFromDate = async (date, data, fromDB = false) => {
 	let alltweet;
 	alltweet = await dbGetTweetIdsByMonth(date);
 
-  /*
+	/*
 	if (!fromDB) {
 		const jsonData = await import('../json/tweet.json');
 		alltweet = jsonData.default ?? {};

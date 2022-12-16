@@ -45,7 +45,7 @@ export const areaData = readable({
 	},
 	'UA-32': {
 		id: 'UA-32',
-	  name: 'キーウ州',
+		name: 'キーウ州',
 		sort: '9'
 	},
 	'UA-35': {
