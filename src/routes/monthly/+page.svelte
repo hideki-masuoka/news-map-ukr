@@ -41,33 +41,11 @@
 	}
 	.glossary-item {
 		@apply flex-grow flex-shrink mb-8;
-
-		svg {
-			@apply inline;
-		}
-		.view-area {
-			@apply mb-4 d-gui-box-pull-sm;
-			&:active {
-				@apply d-gui-box-push-sm;
-			}
-		}
-	}
-
-	.glossary-hr {
-		color: #ccc;
-		@apply text-center;
 	}
 
 	.glossary-content {
 		border: 1px solid #ccc;
 		border-radius: 0.5em;
 		@apply m-auto px-4 py-2 mb-4 ml-4 d-gui-box;
-		.glossary-title {
-			@apply font-bold text-lg;
-		}
-		.glossary-link {
-			color: blue;
-			@apply text-right;
-		}
 	}
 </style>
