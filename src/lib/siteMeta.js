@@ -29,3 +29,5 @@ export const MonthlyLinkList = {
 	],
 	y2023: [{ m: '1', last: '2' }]
 };
+
+export const CurrentDay = '20230103';
