@@ -62,12 +62,17 @@ const ksort = (a, b) => {
 export const getFromDate = async (date, data, fromDB = false) => {
 	let arr = [];
 	let alltweet;
+	alltweet = await dbGetTweetIdsByMonth(date);
+
+	/*
 	if (!fromDB) {
 		const jsonData = await import('../json/tweet.json');
 		alltweet = jsonData.default ?? {};
 	} else {
 		alltweet = await dbGetTweetIdsByMonth(date);
 	}
+  */
+
 	tweetedAreas.set([]);
 	Object.entries(alltweet)
 		.sort(ksort)

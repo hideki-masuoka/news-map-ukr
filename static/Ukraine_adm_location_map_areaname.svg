@@ -11,8 +11,30 @@
    viewBox="0 0 1545.703 1038.492"
    enable-background="new 0 0 1545.703 1038.492"
    xml:space="preserve"
+   sodipodi:docname="Ukraine_adm_location_map_areaname.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview4264"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="0.71546053"
+   inkscape:cx="773.62758"
+   inkscape:cy="518.54712"
+   inkscape:window-width="1600"
+   inkscape:window-height="1139"
+   inkscape:window-x="0"
+   inkscape:window-y="32"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g1867" /><defs
    id="defs391" />
 
 
@@ -300,9 +322,8 @@
        x="690.42413"
        y="338.24814"
        id="text1359"><tspan
-         id="tspan1379"
-         x="690.42413"
-         y="338.24814">キエフ州</tspan></text><text
+         sodipodi:role="line"
+         id="tspan4746">キーウ州</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#ffffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999042;paint-order:markers stroke fill"
        x="783.46783"

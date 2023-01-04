@@ -49,7 +49,7 @@ export const dbGetAllGroupedArea = async () => {
 	return await fetch(FIRESTORE_ROOT + 'setgroupedarea/export/', options)
 		.then((response) => response.json())
 		.then((response) => {
-			console.log('request export');
+			//console.log('request export');
 			return response.result;
 		})
 		.catch((err) => console.error(err));
