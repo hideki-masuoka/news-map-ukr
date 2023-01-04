@@ -67,6 +67,7 @@
 		{#if drawerVisible}
 			<nav class="header-nav" transition:fly={{ x: -120 }}>
 				<Modal show={$modal}>
+          {#if false}
 					<strong>2022年：</strong>
 					<button
 						on:click={() => {
@@ -137,6 +138,9 @@
 						}}
 						class="menu-button">12月</button
 					>
+        {/if}
+          <a class="menu-button" href="/monthly/#link20222">2022年</a>
+          <a class="menu-button" href="/monthly/#link20231">2023年</a>
 					<a class="menu-button" href="/glossary/">用語集</a>
 				</Modal>
 				<a

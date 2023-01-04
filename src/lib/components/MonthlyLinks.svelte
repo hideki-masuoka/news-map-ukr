@@ -13,7 +13,7 @@
 		Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 </script>
 
-<h2 class="title">{yearString}年{monthString}月</h2>
+<h2 class="title" id="link{yearString}{monthString}">{yearString}年{monthString}月</h2>
 <ul>
 	{#each range(Number(firstDay), Number(lastDay), 1) as i}
 		<li>
