@@ -8,7 +8,7 @@ export const SITE_META = readable({
 		'地理情報はWikipedia、ニュース・ソースはTwitterをそれぞれ参照し、手動で追加しています。',
 	repo: 'https://github.com/hideki-masuoka/news-map-ukr',
 	hosting: 'https://news-map-ukr.web.app',
-	lastupdate: '2023-01-02 12:40'
+	lastupdate: '2023-01-04 22:10'
 });
 
 export const GOAT_COUNTER = dev ? '' : import.meta.env.VITE_GOAT_COUNTER;
@@ -27,7 +27,7 @@ export const MonthlyLinkList = {
 		{ m: '11', last: '30' },
 		{ m: '12', last: '31' }
 	],
-	y2023: [{ m: '1', last: '2' }]
+	y2023: [{ m: '1', last: '3' }]
 };
 
-export const CurrentDay = '20230103';
+export const CurrentDay = '20230104';
