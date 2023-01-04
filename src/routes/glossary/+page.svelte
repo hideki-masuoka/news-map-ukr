@@ -84,7 +84,7 @@
 		'%E3%83%9B%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A1%E3%83%AA%E7%A9%BA%E6%B8%AF': {
 			title: 'ホストーメリ空港(アントノフ国際空港)',
 			area: 'UA-32',
-			description: 'キエフ州ホストーメリ市にある国際貨物空港'
+			description: 'キーウ州ホストーメリ市にある国際貨物空港'
 		},
 		'An-225_(%E8%88%AA%E7%A9%BA%E6%A9%9F)': {
 			title: 'An-225 ムリーヤ',
@@ -131,7 +131,7 @@
 						<dt class="glossary-title">{item.title}</dt>
 						<dd class="glossary-text">{item.description}</dd>
 						<dd class="glossary-link">
-							<a href={getWikipediaURL(key, item.lang ?? 'jp')} target="_blank" rel="noopener"
+							<a href={getWikipediaURL(key, item.lang ?? 'jp')} target="_blank" rel="noreferrer"
 								>Wikipediaで表示</a
 							>
 						</dd>

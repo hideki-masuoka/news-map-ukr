@@ -12,11 +12,11 @@
 		<a
 			href="https://wartoday.info"
 			target="_blank"
-			rel="noopener"
+			rel="noreferrer"
 			title="ロシアの大規模なウクライナ侵攻事件に関する情報を掲載したインタラクティブマップ"
 			>wartoday.info</a
 		>
-		もしくは<a href="https://liveuamap.com" target="_blank" rel="noopener"
+		もしくは<a href="https://liveuamap.com" target="_blank" rel="noreferrer"
 			>Live Universal Awareness Map</a
 		>
 		をチェックしてみてください。

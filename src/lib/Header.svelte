@@ -13,6 +13,7 @@
 	let nav;
 	let toggleNavDrawer;
 	let drawerVisible = false;
+	let useMenuButton = false;
 
 	const handleToggleDrawer = () => {
 		drawerVisible = !drawerVisible;
@@ -67,64 +68,80 @@
 		{#if drawerVisible}
 			<nav class="header-nav" transition:fly={{ x: -120 }}>
 				<Modal show={$modal}>
-					<strong>2022年：</strong>
-					<button
-						on:click={() => {
-							openmenu(2);
-						}}
-						class="menu-button"
-					>
-						2月
-					</button>
-					<button
-						on:click={() => {
-							openmenu(3);
-						}}
-						class="menu-button">3月</button
-					>
-					<button
-						on:click={() => {
-							openmenu(4);
-						}}
-						class="menu-button">4月</button
-					>
+					{#if useMenuButton}
+						<strong>2022年：</strong>
+						<button
+							on:click={() => {
+								openmenu(2);
+							}}
+							class="menu-button"
+						>
+							2月
+						</button>
+						<button
+							on:click={() => {
+								openmenu(3);
+							}}
+							class="menu-button">3月</button
+						>
+						<button
+							on:click={() => {
+								openmenu(4);
+							}}
+							class="menu-button">4月</button
+						>
 
-					<button
-						on:click={() => {
-							openmenu(5);
-						}}
-						class="menu-button">5月</button
-					>
-					<button
-						on:click={() => {
-							openmenu(6);
-						}}
-						class="menu-button">6月</button
-					>
-					<button
-						on:click={() => {
-							openmenu(7);
-						}}
-						class="menu-button">7月</button
-					>
-					<button
-						on:click={() => {
-							openmenu(8);
-						}}
-						class="menu-button">8月</button
-					>
-					<button
-						on:click={() => {
-							openmenu(9);
-						}}
-						class="menu-button">9月</button
-					>
-					<button
-						on:click={() => {
-							openmenu(10);
-						}}
-						class="menu-button">10月</button
-					>
+						<button
+							on:click={() => {
+								openmenu(5);
+							}}
+							class="menu-button">5月</button
+						>
+						<button
+							on:click={() => {
+								openmenu(6);
+							}}
+							class="menu-button">6月</button
+						>
+						<button
+							on:click={() => {
+								openmenu(7);
+							}}
+							class="menu-button">7月</button
+						>
+						<button
+							on:click={() => {
+								openmenu(8);
+							}}
+							class="menu-button">8月</button
+						>
+						<button
+							on:click={() => {
+								openmenu(9);
+							}}
+							class="menu-button">9月</button
+						>
+						<button
+							on:click={() => {
+								openmenu(10);
+							}}
+							class="menu-button">10月</button
+						>
+						<button
+							on:click={() => {
+								openmenu(11);
+							}}
+							class="menu-button">11月</button
+						>
+						<button
+							on:click={() => {
+								openmenu(12);
+							}}
+							class="menu-button">12月</button
+						>
+					{/if}
+					<a class="menu-button" href="/monthly/#link20222">2022年</a>
+					<a class="menu-button" href="/monthly/#link20231">2023年</a>
 					<a class="menu-button" href="/glossary/">用語集</a>
 				</Modal>
 				<a
@@ -132,7 +149,7 @@
 					href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E3%81%AE%E5%9C%B0%E6%96%B9%E8%A1%8C%E6%94%BF%E5%8C%BA%E7%94%BB"
 					title="ウクライナの地方行政区画 - Wikipedia"
 					target="_blank"
-					rel="noopener"
+					rel="noreferrer"
 				>
 					ウクライナの地方行政区画
 					<svg
