@@ -22,7 +22,7 @@
 	{/each}
 </ul>
 
-<style lang="windicss">
+<style lang="scss">
 	.title {
 		@apply font-bold mb-4;
 	}

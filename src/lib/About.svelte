@@ -23,7 +23,7 @@
 	</p>
 </div>
 
-<style lang="windicss">
+<style lang="scss">
 	.about-text {
 		@apply mt-4;
 

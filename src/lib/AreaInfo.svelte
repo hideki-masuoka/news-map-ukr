@@ -28,7 +28,7 @@
 	<div class="area-item">&nbsp;</div>
 </div>
 
-<style lang="windicss">
+<style lang="scss">
 	.area-info {
 		@apply hidden;
 		@screen md {

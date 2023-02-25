@@ -1,0 +1,44 @@
+body {
+		@apply bg-stone-50;
+	}
+	a:hover, button:hover {
+		opacity: 0.75;
+	}
+
+	button:disabled {
+		cursor: not-allowed;
+	}
+
+	.d-gui-spacer {
+		flex-grow: 1;
+	}
+
+blockquote.twitter-tweet {
+		opacity: 0;
+		transition: opacity 1s;
+	}
+	.twitter-tweet {
+		@apply m-auto;
+	}
+	.twitter-tweet-noembed {
+		@apply text-right font-bold text-sm rounded-md bg-stone-50 bg-gradient-to-r from-stone-200 p-2 mx-0 mb-2 mt-0 flex flex-wrap flex-col overflow-x-auto;
+
+		a {
+			color: blue;
+			@apply font-bold block ml-auto mr-0;
+		}
+
+		p {
+			@apply text-base text-left font-normal;
+		}
+
+		p a {
+			color: blue;
+			@apply font-normal inline;
+		}
+	}
+	.twitter-tweet-noembed {
+		@screen md {
+			@apply p-4 mx-2 mt-2;
+		}
+	}

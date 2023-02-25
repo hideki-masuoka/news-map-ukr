@@ -15,5 +15,3 @@
 
 <DaysPage {pageTitle} {tweetdata} embed={false} />
 
-<style>
-</style>

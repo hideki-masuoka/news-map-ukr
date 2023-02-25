@@ -108,7 +108,7 @@
 	</section>
 </main>
 
-<style lang="windicss">
+<style lang="scss">
 	:global(body) {
 		@apply bg-gradient-to-t from-stone-300;
 	}
@@ -157,7 +157,10 @@
 		}
 
 		span {
-			@apply block md:inline;
+			@apply block;
+			@screen md {
+				@apply inline;
+			}
 		}
 	}
 	.map-ukr {
