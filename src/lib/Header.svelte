@@ -169,7 +169,7 @@
 	</div>
 </header>
 
-<style lang="windicss">
+<style lang="scss">
 	.site-header {
 		@apply text-stone-600 body-font;
 

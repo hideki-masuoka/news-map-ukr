@@ -51,7 +51,7 @@
 	<p>Not Found</p>
 {/if}
 
-<style lang="windicss">
+<style lang="scss">
 	.monthly {
 		@apply flex flex-wrap justify-left gap-x-2 gap-y-2 rounded-md mt-2 d-gui-box-push-sm p-2 md:p-4 bg-stone-100;
 	}
