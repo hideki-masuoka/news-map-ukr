@@ -1,3 +1,4 @@
+//import preprocess from 'svelte-preprocess';
 //import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-static';
 
@@ -10,7 +11,13 @@ const config = {
 			fallback: null,
 			precompress: true
 		})
-	}
+	},
+
+	/*preprocess: [
+		preprocess({
+			postcss: true
+		})
+	]*/
 };
 
 export default config;

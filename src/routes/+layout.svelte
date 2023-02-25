@@ -1,4 +1,5 @@
 <script>
+	import '../app.postcss';
 	import { dev } from '$app/environment';
 	import 'virtual:windi.css';
 	import Header from '$lib/Header.svelte';
@@ -28,13 +29,13 @@
 	{/if}
 </svelte:head>
 
-<Header />
+<header />
 
 <slot />
 
-<Footer />
+<footer />
 
-<style lang="windicss">
+<style lang="scss">
 	:global(body) {
 		@apply bg-stone-50;
 	}
