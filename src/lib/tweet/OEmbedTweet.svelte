@@ -138,28 +138,4 @@
 		border-radius: 0.5em;
 		@apply m-auto pb-4 px-2 mb-4 ml-4;
 	}
-	:global(blockquote.twitter-tweet) {
-		opacity: 0;
-		transition: opacity 1s;
-	}
-	:global(.twitter-tweet) {
-		@apply m-auto;
-	}
-	:global(.twitter-tweet-noembed) {
-		@apply text-right font-bold text-sm rounded-md bg-stone-50 bg-gradient-to-r from-stone-200 p-2 md:p-4 mx-0 md:mx-2 mb-2 mt-0 md:mt-2 flex flex-wrap flex-col overflow-x-auto;
-
-		:global(a) {
-			color: blue;
-			@apply font-bold block ml-auto mr-0;
-		}
-
-		:global(p) {
-			@apply text-base text-left font-normal;
-		}
-
-		:global(p a) {
-			color: blue;
-			@apply font-normal inline;
-		}
-	}
 </style>

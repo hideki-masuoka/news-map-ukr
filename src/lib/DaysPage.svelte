@@ -157,7 +157,10 @@
 		}
 
 		span {
-			@apply block md:inline;
+			@apply block;
+			@screen md {
+				@apply inline;
+			}
 		}
 	}
 	.map-ukr {

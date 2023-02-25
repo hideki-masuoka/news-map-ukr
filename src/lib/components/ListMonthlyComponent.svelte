@@ -32,10 +32,19 @@
 
 <style lang="scss">
 	.monthly {
-		@apply flex flex-wrap justify-left gap-x-2 gap-y-2 rounded-md mt-2 d-gui-box-push-sm p-2 md:p-4 bg-stone-100;
+		@apply flex flex-wrap justify-left gap-x-2 gap-y-2 rounded-md mt-2 d-gui-box-push-sm p-2 bg-stone-100;
+		@screen md {
+			@apply p-4;
+		}
 	}
 	.button-select-day {
 		transition: all 0.25s ease-out;
-		@apply d-gui-box-sm active:d-gui-box-push-sm text-xs md:text-base;
+		@apply d-gui-box-sm text-xs;
+		&:active {
+			@apply d-gui-box-push-sm;
+		}
+		@screen md {
+			@apply text-base;
+		}
 	}
 </style>

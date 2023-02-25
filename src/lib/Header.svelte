@@ -226,7 +226,10 @@
 		}
 
 		.toggle-nav-drawer {
-			@apply block text-stone-500 ml-auto mr-0 p-1 w-8 h-8 rounded-full d-gui-box-pull-sm active:d-gui-box-push-sm;
+			@apply block text-stone-500 ml-auto mr-0 p-1 w-8 h-8 rounded-full d-gui-box-pull-sm;
+			&:active {
+				@apply d-gui-box-push-sm;
+			}
 			@screen md {
 				@apply hidden;
 			}

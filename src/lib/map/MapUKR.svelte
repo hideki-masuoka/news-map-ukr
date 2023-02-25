@@ -106,7 +106,10 @@
 <style lang="scss">
 	.map-ukr {
 		grid-template-areas: 'map';
-		@apply container grid m-auto rounded-md d-gui-box p-1 md:p-4;
+		@apply container grid m-auto rounded-md d-gui-box p-1;
+		@screen md {
+			@apply p-4;
+		}
 
 		svg {
 			@apply w-full h-auto;
