@@ -11,7 +11,11 @@
 	{#each Object.entries($areaData) as [key, item]}
 		{#if !('UA-UKR' === key)}
 			<div class="area-item">
-				<button class="area-select d-gui-chips chip variant-glass-secondary" title={key} on:click={areaSelect(key)}>
+				<button
+					class="area-select d-gui-chips chip variant-glass-secondary"
+					title={key}
+					on:click={areaSelect(key)}
+				>
 					<svg fill="currentColor" stroke="none" width="24" height="24" viewBox="0 0 24 24"
 						><path
 							d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,

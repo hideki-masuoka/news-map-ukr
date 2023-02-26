@@ -12,7 +12,6 @@
 	export let tweetdata = [];
 	export let pageTitle = '';
 	export let embed = true;
-
 </script>
 
 <MetaTags
@@ -66,7 +65,7 @@
 </svelte:head>
 
 <div class="days-page">
-<div class="page-title">
+	<div class="page-title">
 		<h1>{pageTitle}</h1>
 		{#await tweetdata then tweetdata}
 			<span class="tweet-counter">({tweetdata.length} Tweets)</span>
@@ -75,32 +74,34 @@
 	<div class="page-nav">
 		<a class="menu-button chip variant-ghost-primary" href="/">TOP</a>
 		<a class="menu-button chip variant-ghost-primary" href="/monthly/#link20222">2022年</a>
-<a class="menu-button chip variant-ghost-primary" href="/monthly/#link20231">2023年</a>
-<a class="menu-button chip variant-ghost-primary" href="/glossary/">用語集</a>
-</div>
+		<a class="menu-button chip variant-ghost-primary" href="/monthly/#link20231">2023年</a>
+		<a class="menu-button chip variant-ghost-primary" href="/glossary/">用語集</a>
+	</div>
 	<section class="map-ukr">
 		<MapUKR />
 		<div class="text-right py-2">
 			<a
-			class="header-external-link"
-			href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E3%81%AE%E5%9C%B0%E6%96%B9%E8%A1%8C%E6%94%BF%E5%8C%BA%E7%94%BB"
-			title="ウクライナの地方行政区画 - Wikipedia"
-			target="_blank"
-			rel="noreferrer"
-		>
-			ウクライナの地方行政区画
-			<svg
-				fill="none"
-				stroke="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				class="w-4 h-4 ml-1 inline"
-				viewBox="0 0 24 24"
+				class="header-external-link"
+				href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E3%81%AE%E5%9C%B0%E6%96%B9%E8%A1%8C%E6%94%BF%E5%8C%BA%E7%94%BB"
+				title="ウクライナの地方行政区画 - Wikipedia"
+				target="_blank"
+				rel="noreferrer"
 			>
-				<path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-			</svg>
-		</a>
+				ウクライナの地方行政区画
+				<svg
+					fill="none"
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					class="w-4 h-4 ml-1 inline"
+					viewBox="0 0 24 24"
+				>
+					<path
+						d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+					/>
+				</svg>
+			</a>
 		</div>
 		<AreaInfo />
 	</section>
@@ -119,9 +120,6 @@
 </div>
 
 <style lang="scss">
-	:global(body) {
-		//@apply bg-gradient-to-t from-stone-300;
-	}
 	.days-page {
 		grid-template-areas:
 			'title title'
@@ -129,8 +127,7 @@
 			'map map'
 			'about about';
 
-		@apply  m-auto px-2 py-4 grid gap-y-1 gap-x-4;
-
+		@apply m-auto px-2 py-4 grid gap-y-1 gap-x-4;
 
 		@screen md {
 			grid-template-areas:
@@ -183,7 +180,6 @@
 			max-height: 80vh;
 			@apply pl-4;
 		}
-
 	}
 	.site-about {
 		grid-area: about;

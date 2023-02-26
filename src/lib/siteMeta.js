@@ -28,9 +28,9 @@ export const MonthlyLinkList = {
 		{ m: '12', last: '31' }
 	],
 	y2023: [
-      { m: '1', last: '31' },
-      { m: '2', last: '24'}
-  ]
+		{ m: '1', last: '31' },
+		{ m: '2', last: '24' }
+	]
 };
 
 export const CurrentDay = '20230225';

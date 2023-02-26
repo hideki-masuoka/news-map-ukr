@@ -55,7 +55,10 @@
 				<div class="tweetLoading">Loading...</div>
 			{/if}
 			<div class="tweet-content card card-hover variant-soft-surface">
-				<button class="view-area d-gui-chips btn btn-sm variant-ghost-tertiary" on:click={handleViewArea(item.area, item.id)}>
+				<button
+					class="view-area d-gui-chips btn btn-sm variant-ghost-tertiary"
+					on:click={handleViewArea(item.area, item.id)}
+				>
 					<svg
 						class="button"
 						fill="currentColor"
@@ -70,7 +73,7 @@
 					<strong>{getAreaName(item.area)}</strong>
 				</button>
 				{#if item.embed.html ?? false}
-				{@html item.embed.html.replace('twitter-tweet', 'twitter-tweet-noembed')}
+					{@html item.embed.html.replace('twitter-tweet', 'twitter-tweet-noembed')}
 				{:else}
 					<div class="twitter-tweet-noembed">
 						<p>not found</p>
@@ -102,8 +105,8 @@
 	.embedTweets {
 		@apply container m-auto w-full pr-4;
 		@screen 2xl {
-				@apply grid grid-cols-2 grid-flow-row;
-			}
+			@apply grid grid-cols-2 grid-flow-row;
+		}
 	}
 	.tweetItem {
 		@apply flex-grow flex-shrink mb-8;

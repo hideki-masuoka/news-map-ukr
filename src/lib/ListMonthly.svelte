@@ -62,7 +62,7 @@
 		transition: all 0.25s ease-out;
 		@apply d-gui-box-sm text-xs;
 		&:active {
-			 @apply d-gui-box-push-sm;
+			@apply d-gui-box-push-sm;
 		}
 		@screen md {
 			@apply text-base;

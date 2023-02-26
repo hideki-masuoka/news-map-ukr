@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
 	import { SITE_META } from '$lib/siteMeta.js';
 	import Clock from '$lib/Clock.svelte';
 
@@ -63,9 +62,8 @@
 
 	<svelte:fragment slot="headline">
 		<Clock />
-</svelte:fragment>
+	</svelte:fragment>
 </AppBar>
 
 <style lang="scss">
-
 </style>
