@@ -35,14 +35,7 @@
 
 <AppShell>
 	<svelte:fragment slot="header"><Header /></svelte:fragment>
-	<svelte:fragment slot="sidebarRight">RRR</svelte:fragment>
+	<slot />
 	<svelte:fragment slot="footer"><Footer /></svelte:fragment>
 </AppShell>
-
-<Header />
-
-<slot />
-
-<Footer />
-
 

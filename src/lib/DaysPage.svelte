@@ -70,7 +70,7 @@
 	</script>
 </svelte:head>
 
-<main class="days-page">
+<div class="days-page">
 	<div class="page-title">
 		<h1>{pageTitle}</h1>
 		{#await tweetdata then tweetdata}
@@ -106,7 +106,7 @@
 	<section class="site-about">
 		<About />
 	</section>
-</main>
+</div>
 
 <style lang="scss">
 	:global(body) {
