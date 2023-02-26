@@ -73,10 +73,10 @@
 		{/await}
 	</div>
 	<div class="page-nav">
-		<a class="menu-button" href="/">TOP</a>
-		<a class="menu-button" href="/monthly/#link20222">2022年</a>
-<a class="menu-button" href="/monthly/#link20231">2023年</a>
-<a class="menu-button" href="/glossary/">用語集</a>
+		<a class="menu-button chip variant-ghost-primary" href="/">TOP</a>
+		<a class="menu-button chip variant-ghost-primary" href="/monthly/#link20222">2022年</a>
+<a class="menu-button chip variant-ghost-primary" href="/monthly/#link20231">2023年</a>
+<a class="menu-button chip variant-ghost-primary" href="/glossary/">用語集</a>
 </div>
 	<section class="map-ukr">
 		<MapUKR />
@@ -167,7 +167,7 @@
 			height: 1.5em;
 			@apply text-right mt-8;
 			a {
-				@apply chip variant-ghost-primary text-black font-bold;
+				@apply text-black font-bold;
 			}
 		}
 	}

@@ -54,8 +54,8 @@
 			{#if isLoaded[item.id]}
 				<div class="tweetLoading">Loading...</div>
 			{/if}
-			<div class="tweet-content">
-				<button class="view-area d-gui-chips" on:click={handleViewArea(item.area, item.id)}>
+			<div class="tweet-content card card-hover variant-soft-surface">
+				<button class="view-area d-gui-chips btn btn-sm variant-ghost-tertiary" on:click={handleViewArea(item.area, item.id)}>
 					<svg
 						class="button"
 						fill="currentColor"
@@ -124,7 +124,7 @@
 		}
 		.view-area {
 			transition: all 0.125s ease-out;
-			@apply btn btn-sm variant-filled-secondary rounded-tr-md rounded-br-md;
+			@apply rounded-tr-md rounded-br-md -ml-4;
 		}
 	}
 
@@ -134,6 +134,6 @@
 	}
 
 	.tweet-content {
-		@apply card card-hover variant-soft-secondary px-2 py-4 m-2;
+		@apply px-2 py-4 m-2;
 	}
 </style>
