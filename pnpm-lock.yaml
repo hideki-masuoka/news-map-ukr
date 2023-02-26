@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@skeletonlabs/skeleton': ^0.132.5
   '@sveltejs/adapter-auto': 2.0.0
   '@sveltejs/adapter-static': 2.0.1
   '@sveltejs/kit': 1.8.5
@@ -25,6 +26,7 @@ dependencies:
   material-components-web: 14.0.0
 
 devDependencies:
+  '@skeletonlabs/skeleton': 0.132.5
   '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.8.5
   '@sveltejs/adapter-static': 2.0.1_@sveltejs+kit@1.8.5
   '@sveltejs/kit': 1.8.5_svelte@3.55.1+vite@4.1.4
@@ -971,6 +973,12 @@ packages:
 
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
+    dev: true
+
+  /@skeletonlabs/skeleton/0.132.5:
+    resolution: {integrity: sha512-xbw/2hWw7/BjIYjEw9fDNG/to9/nML6Lc7m/PPSHG7cP6+pQ5CwvNxAXhErCkIGICuAKXiesYglhw2PrZY6M2A==}
+    dependencies:
+      svelte: 3.55.1
     dev: true
 
   /@sveltejs/adapter-auto/2.0.0_@sveltejs+kit@1.8.5:
