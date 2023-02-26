@@ -10,8 +10,12 @@
 <div class="area-info">
 	{#each Object.entries($areaData) as [key, item]}
 		{#if !('UA-UKR' === key)}
-			<div class="area-item d-gui-chips text-xs">
-				<button class="area-select" title={key} on:click={areaSelect(key)}>
+			<div class="area-item">
+				<button
+					class="area-select d-gui-chips chip variant-glass-secondary"
+					title={key}
+					on:click={areaSelect(key)}
+				>
 					<svg fill="currentColor" stroke="none" width="24" height="24" viewBox="0 0 24 24"
 						><path
 							d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,
@@ -28,29 +32,23 @@
 	<div class="area-item">&nbsp;</div>
 </div>
 
-<style lang="windicss">
+<style lang="scss">
 	.area-info {
 		@apply hidden;
 		@screen md {
 			@apply flex;
 		}
-		@apply mt-4 flex-wrap gap-x-4 gap-y-4 justify-left;
+		@apply mt-4 flex-wrap gap-x-4 gap-y-2 justify-left;
 
 		svg {
 			@apply inline;
 		}
 		.area-item {
 			transition: all 0.125s ease-out;
-			@apply d-gui-box-pull-sm py-0 text-stone-600;
-			&:active {
-				@apply d-gui-box-push-sm py-0;
-			}
 		}
 		.area-item:last-child {
 			flex-grow: 1;
 			box-shadow: none;
-		}
-		.area-select {
 		}
 	}
 </style>

@@ -17,22 +17,19 @@
 <ul>
 	{#each range(Number(firstDay), Number(lastDay), 1) as i}
 		<li>
-			<a href={getHref(i)}>{i}日</a>
+			<a class="btn btn-sm variant-ringed-secondary" href={getHref(i)}>{i}日</a>
 		</li>
 	{/each}
 </ul>
 
-<style lang="windicss">
+<style lang="scss">
 	.title {
 		@apply font-bold mb-4;
 	}
 	ul {
-		@apply flex flex-wrap gap-4 my-4;
+		@apply flex flex-wrap gap-2 my-4;
 	}
 	li {
 		@apply text-center;
-		a {
-			@apply text-blue-600;
-		}
 	}
 </style>

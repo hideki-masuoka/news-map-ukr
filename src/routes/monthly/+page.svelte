@@ -10,16 +10,16 @@
 	<svelte:fragment slot="glossaly">
 		<div class="glossary-wrap">
 			<div class="glossary-item">
-				<div class="glossary-content">
+				<div class="glossary-content card card-hover variant-ringed-primary">
 					<MonthlyLinks yearString="2022" monthString="2" firstDay="24" lastDay="28" />
 				</div>
 				{#each MonthlyLinkList.y2022 as data}
-					<div class="glossary-content">
+					<div class="glossary-content card card-hover variant-ringed-primary">
 						<MonthlyLinks yearString="2022" monthString={data.m} lastDay={data.last} />
 					</div>
 				{/each}
 				{#each MonthlyLinkList.y2023 as data}
-					<div class="glossary-content">
+					<div class="glossary-content card card-hover variant-ringed-primary">
 						<MonthlyLinks yearString="2023" monthString={data.m} lastDay={data.last} />
 					</div>
 				{/each}
@@ -28,7 +28,7 @@
 	</svelte:fragment>
 </DaysPage>
 
-<style lang="windicss">
+<style lang="scss">
 	.glossary-wrap {
 		@apply container m-auto w-full pr-4;
 	}
@@ -39,6 +39,6 @@
 	.glossary-content {
 		border: 1px solid #ccc;
 		border-radius: 0.5em;
-		@apply m-auto px-4 py-2 mb-4 ml-4 d-gui-box;
+		@apply m-auto px-4 py-2 mb-4 ml-4;
 	}
 </style>

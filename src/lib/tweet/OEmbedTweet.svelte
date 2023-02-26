@@ -51,24 +51,27 @@
 <div class="embedTweets">
 	{#each tweetdata as item}
 		<div id="twt{item.id}" class="tweetItem">
-			<button class="view-area d-gui-chips" on:click={handleViewArea(item.area, item.id)}>
-				<svg
-					class="button"
-					fill="currentColor"
-					stroke="none"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					><path
-						d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
-					/></svg
-				>
-				<strong>{getAreaName(item.area)}</strong>
-			</button>
 			{#if isLoaded[item.id]}
 				<div class="tweetLoading">Loading...</div>
 			{/if}
-			<div class="tweet-content d-gui-box">
+			<div class="tweet-content card card-hover variant-soft-surface">
+				<button
+					class="view-area d-gui-chips btn btn-sm variant-ghost-tertiary"
+					on:click={handleViewArea(item.area, item.id)}
+				>
+					<svg
+						class="button"
+						fill="currentColor"
+						stroke="none"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						><path
+							d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
+						/></svg
+					>
+					<strong>{getAreaName(item.area)}</strong>
+				</button>
 				{#if item.embed.html ?? false}
 					{@html item.embed.html.replace('twitter-tweet', 'twitter-tweet-noembed')}
 				{:else}
@@ -98,9 +101,12 @@
 	{/each}
 </div>
 
-<style lang="windicss">
+<style lang="scss">
 	.embedTweets {
 		@apply container m-auto w-full pr-4;
+		@screen 2xl {
+			@apply grid grid-cols-2 grid-flow-row;
+		}
 	}
 	.tweetItem {
 		@apply flex-grow flex-shrink mb-8;
@@ -121,10 +127,7 @@
 		}
 		.view-area {
 			transition: all 0.125s ease-out;
-			@apply mb-4 d-gui-box-pull-sm text-stone-600;
-			&:active {
-				@apply d-gui-box-push-sm;
-			}
+			@apply rounded-tr-md rounded-br-md -ml-4;
 		}
 	}
 
@@ -134,32 +137,6 @@
 	}
 
 	.tweet-content {
-		border: 0 solid #ccc;
-		border-radius: 0.5em;
-		@apply m-auto pb-4 px-2 mb-4 ml-4;
-	}
-	:global(blockquote.twitter-tweet) {
-		opacity: 0;
-		transition: opacity 1s;
-	}
-	:global(.twitter-tweet) {
-		@apply m-auto;
-	}
-	:global(.twitter-tweet-noembed) {
-		@apply text-right font-bold text-sm rounded-md bg-stone-50 bg-gradient-to-r from-stone-200 p-2 md:p-4 mx-0 md:mx-2 mb-2 mt-0 md:mt-2 flex flex-wrap flex-col overflow-x-auto;
-
-		:global(a) {
-			color: blue;
-			@apply font-bold block ml-auto mr-0;
-		}
-
-		:global(p) {
-			@apply text-base text-left font-normal;
-		}
-
-		:global(p a) {
-			color: blue;
-			@apply font-normal inline;
-		}
+		@apply px-2 py-4 m-2;
 	}
 </style>

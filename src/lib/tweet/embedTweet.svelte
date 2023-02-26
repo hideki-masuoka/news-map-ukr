@@ -56,7 +56,7 @@
 	{/each}
 </div>
 
-<style lang="windicss">
+<style lang="scss">
 	.embedTweets {
 		@apply container m-auto w-full flex flex-wrap gap-4;
 	}
