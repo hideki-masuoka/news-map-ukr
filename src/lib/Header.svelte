@@ -1,31 +1,24 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
-	import { writable } from 'svelte/store';
-	import Modal from 'svelte-simple-modal';
-	import { bind } from 'svelte-simple-modal/src/Modal.svelte';
-	import ListMonthly from '$lib/ListMonthly.svelte';
 	import { SITE_META } from '$lib/siteMeta.js';
+	import Clock from '$lib/Clock.svelte';
 
-	const modal = writable(null);
-	const openmenu = (num) => modal.set(bind(ListMonthly, { monthNum: num }));
+	import { AppBar } from '@skeletonlabs/skeleton';
 
-	let nav;
 	let toggleNavDrawer;
 	let drawerVisible = false;
-	let useMenuButton = false;
 
 	const handleToggleDrawer = () => {
 		drawerVisible = !drawerVisible;
 	};
 
 	onMount(() => {
-		drawerVisible = toggleNavDrawer.getBoundingClientRect().width === 0 ? true : false;
+		//drawerVisible = toggleNavDrawer.getBoundingClientRect().width === 0 ? true : false;
 	});
 </script>
 
-<header class="site-header" bind:this={nav}>
-	<div class="header-contents">
+<AppBar>
+	<svelte:fragment slot="lead">
 		<div class="header-title">
 			<a href="/">
 				<svg
@@ -35,7 +28,7 @@
 					stroke-linecap="round"
 					stroke-linejoin="round"
 					stroke-width="2"
-					class="w-10 h-10 text-white p-2 bg-stone-500 rounded-full"
+					class="w-10 h-10 p-2 bg-white rounded-full inline"
 					viewBox="0 0 24 24"
 				>
 					<path
@@ -65,177 +58,12 @@
 				>
 			</button>
 		</div>
-		{#if drawerVisible}
-			<nav class="header-nav" transition:fly={{ x: -120 }}>
-				<Modal show={$modal}>
-					{#if useMenuButton}
-						<strong>2022年：</strong>
-						<button
-							on:click={() => {
-								openmenu(2);
-							}}
-							class="menu-button"
-						>
-							2月
-						</button>
-						<button
-							on:click={() => {
-								openmenu(3);
-							}}
-							class="menu-button">3月</button
-						>
-						<button
-							on:click={() => {
-								openmenu(4);
-							}}
-							class="menu-button">4月</button
-						>
+	</svelte:fragment>
 
-						<button
-							on:click={() => {
-								openmenu(5);
-							}}
-							class="menu-button">5月</button
-						>
-						<button
-							on:click={() => {
-								openmenu(6);
-							}}
-							class="menu-button">6月</button
-						>
-						<button
-							on:click={() => {
-								openmenu(7);
-							}}
-							class="menu-button">7月</button
-						>
-						<button
-							on:click={() => {
-								openmenu(8);
-							}}
-							class="menu-button">8月</button
-						>
-						<button
-							on:click={() => {
-								openmenu(9);
-							}}
-							class="menu-button">9月</button
-						>
-						<button
-							on:click={() => {
-								openmenu(10);
-							}}
-							class="menu-button">10月</button
-						>
-						<button
-							on:click={() => {
-								openmenu(11);
-							}}
-							class="menu-button">11月</button
-						>
-						<button
-							on:click={() => {
-								openmenu(12);
-							}}
-							class="menu-button">12月</button
-						>
-					{/if}
-					<a class="menu-button" href="/monthly/#link20222">2022年</a>
-					<a class="menu-button" href="/monthly/#link20231">2023年</a>
-					<a class="menu-button" href="/glossary/">用語集</a>
-				</Modal>
-				<a
-					class="header-external-link"
-					href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E3%81%AE%E5%9C%B0%E6%96%B9%E8%A1%8C%E6%94%BF%E5%8C%BA%E7%94%BB"
-					title="ウクライナの地方行政区画 - Wikipedia"
-					target="_blank"
-					rel="noreferrer"
-				>
-					ウクライナの地方行政区画
-					<svg
-						fill="none"
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						class="w-4 h-4 ml-1"
-						viewBox="0 0 24 24"
-					>
-						<path d="M5 12h14M12 5l7 7-7 7" />
-					</svg>
-				</a>
-			</nav>
-		{/if}
-	</div>
-</header>
+	<svelte:fragment slot="headline">
+		<Clock />
+	</svelte:fragment>
+</AppBar>
 
 <style lang="scss">
-	.site-header {
-		@apply text-stone-600 body-font;
-
-		.header-contents {
-			@apply container mx-auto flex flex-wrap p-2 flex-col items-center;
-			@screen md {
-				@apply p-5 flex-row;
-			}
-		}
-
-		.header-title {
-			@apply flex title-font items-left w-full text-stone-900 mb-2;
-			@screen md {
-				@apply w-auto mb-0;
-			}
-
-			svg {
-				@apply inline-block w-8 h-8;
-				@screen md {
-					@apply w-10 h-10;
-				}
-			}
-
-			.site-title {
-				@apply text-base ml-1;
-				@screen md {
-					@apply text-xl;
-				}
-			}
-		}
-
-		.header-nav {
-			@apply flex flex-wrap items-center justify-start gap-2 text-base mb-0 px-4 py-0;
-
-			@screen md {
-				flex-grow: 1;
-				@apply justify-start mr-0 ml-4 py-1 pl-4 gap-0;
-			}
-			.menu-button {
-				transition: all 0.125s ease-out;
-				@apply rounded-full font-bold text-stone-500 text-md;
-				@screen md {
-					@apply mr-5;
-				}
-			}
-		}
-
-		.header-external-link {
-			transition: all 0.125s ease-out;
-			@apply inline-flex items-center rounded-full py-2 px-4 font-bold text-stone-500 mt-0 mb-4;
-			@screen md {
-				@apply mt-0 mb-0 ml-auto mr-0;
-			}
-		}
-
-		.toggle-nav-drawer {
-			@apply block text-stone-500 ml-auto mr-0 p-1 w-8 h-8 rounded-full d-gui-box-pull-sm;
-			&:active {
-				@apply d-gui-box-push-sm;
-			}
-			@screen md {
-				@apply hidden;
-			}
-			svg {
-				@apply w-full h-full block m-auto;
-			}
-		}
-	}
 </style>

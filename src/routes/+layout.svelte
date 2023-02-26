@@ -1,10 +1,14 @@
 <script>
-	import '../app.css';
+	//import '../app.css';
+	import '@skeletonlabs/skeleton/themes/theme-vintage.css';
+	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../global.scss';
 	import { dev } from '$app/environment';
 	import Header from '$lib/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import { GOAT_COUNTER, USE_GTM } from '$lib/siteMeta.js';
+
+	import { AppShell } from '@skeletonlabs/skeleton';
 </script>
 
 <svelte:head>
@@ -29,10 +33,8 @@
 	{/if}
 </svelte:head>
 
-<Header />
-
-<slot />
-
-<Footer />
-
-
+<AppShell>
+	<svelte:fragment slot="pageHeader"><Header /></svelte:fragment>
+	<slot />
+	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
+</AppShell>

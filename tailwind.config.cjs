@@ -1,13 +1,15 @@
-//import plugin from 'tailwindcss/plugin';
-//const plugin = require('tailwindcss/plugin')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	darkMode: 'class', //skeleton
+	content: [
+		'./src/**/*.{html,js,svelte,ts}',
+		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}') //skeleteon
+	],
 	theme: {
 		extend: {}
 	},
 	plugins: [
+		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')(), //skeleton
 		function ({ addComponents }) {
 			addComponents({
 				'.body-font': {},

@@ -12,6 +12,7 @@
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@skeletonlabs/skeleton": "^0.132.5",
 		"@sveltejs/adapter-auto": "2.0.0",
 		"@sveltejs/adapter-static": "2.0.1",
 		"@sveltejs/kit": "1.8.5",
