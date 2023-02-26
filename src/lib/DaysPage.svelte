@@ -122,12 +122,13 @@
 <style lang="scss">
 	.days-page {
 		grid-template-areas:
-			'title title'
-			'tweet tweet'
-			'map map'
-			'about about';
+			'title'
+			'tweet'
+			'map'
+			'about';
+		grid-template-columns: none;
 
-		@apply m-auto px-2 py-4 grid gap-y-1 gap-x-4;
+		@apply m-auto px-2 py-4 grid gap-y-1;
 
 		@screen md {
 			grid-template-areas:
@@ -136,7 +137,7 @@
 				'about tweet';
 			grid-template-columns: 1fr 32em;
 
-			@apply px-5;
+			@apply px-5 gap-x-4;
 		}
 
 		@screen 2xl {
@@ -148,7 +149,7 @@
 			@apply text-base text-stone-700 flex mt-0 px-4;
 
 			h1 {
-				@apply font-bold;
+				@apply font-bold text-xl;
 				@screen md {
 					@apply text-2xl;
 				}
