@@ -33,9 +33,10 @@
 	{/if}
 </svelte:head>
 
+
 <AppShell>
-	<svelte:fragment slot="header"><Header /></svelte:fragment>
+	<svelte:fragment slot="pageHeader"><Header /></svelte:fragment>
 	<slot />
-	<svelte:fragment slot="footer"><Footer /></svelte:fragment>
+	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
 </AppShell>
 

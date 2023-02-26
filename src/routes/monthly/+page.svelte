@@ -39,6 +39,6 @@
 	.glossary-content {
 		border: 1px solid #ccc;
 		border-radius: 0.5em;
-		@apply m-auto px-4 py-2 mb-4 ml-4 d-gui-box;
+		@apply m-auto px-4 py-2 mb-4 ml-4 card card-hover variant-ringed-primary;
 	}
 </style>

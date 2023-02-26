@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import { DateTime } from 'luxon';
 	import OEmbedTweet from '$lib/tweet/OEmbedTweet.svelte';
 	import MapUKR from '$lib/map/MapUKR.svelte';
 
@@ -14,10 +13,6 @@
 	export let pageTitle = '';
 	export let embed = true;
 
-	const TimeJP = DateTime.now().reconfigure({ locale: 'jp', outputCalendar: 'japanese' });
-	const TimeUA = DateTime.now()
-		.reconfigure({ locale: 'jp', outputCalendar: 'japanese' })
-		.setZone('EET');
 </script>
 
 <MetaTags
@@ -71,27 +66,42 @@
 </svelte:head>
 
 <div class="days-page">
-	<div class="page-title">
+<div class="page-title">
 		<h1>{pageTitle}</h1>
 		{#await tweetdata then tweetdata}
-			<span class="tweet-counter">({tweetdata.length} Tweet)</span>
+			<span class="tweet-counter">({tweetdata.length} Tweets)</span>
 		{/await}
 	</div>
-	<div class="clock">
-		<strong class="text-stone-800">現在時刻</strong>
-		<span class="text-stone-700 pl-4"
-			><span class="text-xs md:text-sm">日本時間</span>{TimeJP.toFormat(
-				"LLL'月'dd'日' HH:mm"
-			)}</span
-		>
-		<span class="text-stone-700 pl-4"
-			><span class="text-xs md:text-sm">現地時間</span>{TimeUA.toFormat(
-				"LLL'月'dd'日' HH:mm"
-			)}</span
-		>
-	</div>
+	<div class="page-nav">
+		<a class="menu-button" href="/">TOP</a>
+		<a class="menu-button" href="/monthly/#link20222">2022年</a>
+<a class="menu-button" href="/monthly/#link20231">2023年</a>
+<a class="menu-button" href="/glossary/">用語集</a>
+</div>
 	<section class="map-ukr">
 		<MapUKR />
+		<div class="text-right py-2">
+			<a
+			class="header-external-link"
+			href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E3%81%AE%E5%9C%B0%E6%96%B9%E8%A1%8C%E6%94%BF%E5%8C%BA%E7%94%BB"
+			title="ウクライナの地方行政区画 - Wikipedia"
+			target="_blank"
+			rel="noreferrer"
+		>
+			ウクライナの地方行政区画
+			<svg
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				class="w-4 h-4 ml-1 inline"
+				viewBox="0 0 24 24"
+			>
+				<path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+			</svg>
+		</a>
+		</div>
 		<AreaInfo />
 	</section>
 	<section class="tweet-list">
@@ -110,21 +120,21 @@
 
 <style lang="scss">
 	:global(body) {
-		@apply bg-gradient-to-t from-stone-300;
+		//@apply bg-gradient-to-t from-stone-300;
 	}
 	.days-page {
 		grid-template-areas:
-			'clock clock'
 			'title title'
 			'tweet tweet'
 			'map map'
 			'about about';
 
-		@apply container m-auto px-2 grid gap-y-1 gap-x-4;
+		@apply  m-auto px-2 py-4 grid gap-y-1 gap-x-4;
+
 
 		@screen md {
 			grid-template-areas:
-				'clock title'
+				'map title'
 				'map tweet'
 				'about tweet';
 			grid-template-columns: 1fr 32em;
@@ -132,9 +142,13 @@
 			@apply px-5;
 		}
 
+		@screen 2xl {
+			grid-template-columns: 1fr 64em;
+		}
+
 		.page-title {
 			grid-area: title;
-			@apply text-base text-stone-700 flex;
+			@apply text-base text-stone-700 flex mt-0 px-4;
 
 			h1 {
 				@apply font-bold;
@@ -144,22 +158,16 @@
 			}
 
 			.tweet-counter {
-				@apply inline-block ml-auto mr-0 pr-2 self-end;
+				@apply inline-block ml-2 mb-0 mt-2 pr-2 align-bottom;
 			}
 		}
-	}
-	.clock {
-		grid-area: clock;
-		@apply text-xs flex flex-row pb-2;
 
-		@screen md {
-			@apply text-base;
-		}
-
-		span {
-			@apply block;
-			@screen md {
-				@apply inline;
+		.page-nav {
+			grid-area: title;
+			height: 1.5em;
+			@apply text-right mt-8;
+			a {
+				@apply chip variant-ghost-primary text-black font-bold;
 			}
 		}
 	}
@@ -169,14 +177,13 @@
 	.tweet-list {
 		grid-area: tweet;
 		max-height: 50vh;
-		box-shadow: inset -4px -4px 12px rgba(255, 255, 255, 0.5),
-			inset 4px 4px 12px rgba(0, 0, 0, 0.125);
-		@apply overflow-y-scroll overflow-x-hidden pt-4 pb-48 px-2 rounded-lg;
+		@apply overflow-y-scroll overflow-x-hidden mt-2 pt-2 pb-48 px-2 rounded-lg;
 
 		@screen md {
 			max-height: 80vh;
 			@apply pl-4;
 		}
+
 	}
 	.site-about {
 		grid-area: about;

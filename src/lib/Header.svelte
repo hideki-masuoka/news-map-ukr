@@ -2,6 +2,9 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { SITE_META } from '$lib/siteMeta.js';
+	import Clock from '$lib/Clock.svelte';
+
+	import { AppBar } from '@skeletonlabs/skeleton';
 
 	let toggleNavDrawer;
 	let drawerVisible = false;
@@ -11,12 +14,12 @@
 	};
 
 	onMount(() => {
-		drawerVisible = toggleNavDrawer.getBoundingClientRect().width === 0 ? true : false;
+		//drawerVisible = toggleNavDrawer.getBoundingClientRect().width === 0 ? true : false;
 	});
 </script>
 
-<div class="site-header">
-	<div class="header-contents">
+<AppBar>
+	<svelte:fragment slot="lead">
 		<div class="header-title">
 			<a href="/">
 				<svg
@@ -26,7 +29,7 @@
 					stroke-linecap="round"
 					stroke-linejoin="round"
 					stroke-width="2"
-					class="w-10 h-10 text-white p-2 bg-stone-500 rounded-full"
+					class="w-10 h-10 p-2 bg-white rounded-full inline"
 					viewBox="0 0 24 24"
 				>
 					<path
@@ -56,35 +59,12 @@
 				>
 			</button>
 		</div>
-		{#if drawerVisible}
-			<nav class="header-nav" transition:fly={{ x: -120 }}>
-				<a class="menu-button" href="/monthly/#link20222">2022年</a>
-				<a class="menu-button" href="/monthly/#link20231">2023年</a>
-				<a class="menu-button" href="/glossary/">用語集</a>
-				<a
-					class="header-external-link"
-					href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E3%81%AE%E5%9C%B0%E6%96%B9%E8%A1%8C%E6%94%BF%E5%8C%BA%E7%94%BB"
-					title="ウクライナの地方行政区画 - Wikipedia"
-					target="_blank"
-					rel="noreferrer"
-				>
-					ウクライナの地方行政区画
-					<svg
-						fill="none"
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						class="w-4 h-4 ml-1"
-						viewBox="0 0 24 24"
-					>
-						<path d="M5 12h14M12 5l7 7-7 7" />
-					</svg>
-				</a>
-			</nav>
-		{/if}
-	</div>
-</div>
+	</svelte:fragment>
+
+	<svelte:fragment slot="headline">
+		<Clock />
+</svelte:fragment>
+</AppBar>
 
 <style lang="scss">
 	.site-header {
