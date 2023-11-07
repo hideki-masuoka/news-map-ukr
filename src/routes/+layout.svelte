@@ -1,7 +1,5 @@
 <script>
-	//import '../app.css';
-	import '@skeletonlabs/skeleton/themes/theme-vintage.css';
-	import '@skeletonlabs/skeleton/styles/all.css';
+	import '../app.css';
 	import '../global.scss';
 	import { dev } from '$app/environment';
 	import Header from '$lib/Header.svelte';
