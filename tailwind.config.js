@@ -1,15 +1,24 @@
+// @ts-check
+import { join } from 'path';
+
+// 1. Import the Skeleton plugin
+import { skeleton } from '@skeletonlabs/tw-plugin';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	darkMode: 'class', //skeleton
+	darkMode: 'class',
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
-		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}') //skeleteon
+		join(require.resolve(
+			'@skeletonlabs/skeleton'),
+			'../**/*.{html,js,svelte,ts}'
+		)
 	],
 	theme: {
 		extend: {}
 	},
 	plugins: [
-		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')(), //skeleton
+
 		function ({ addComponents }) {
 			addComponents({
 				'.body-font': {},
@@ -73,6 +82,9 @@ module.exports = {
 					boxShadow: 'inset -1px -1px 2px #f5f5f4, inset 1px 1px 2px #a8a29e'
 				}
 			});
-		}
+		},
+		skeleton({
+			themes: { preset: [ "vintage" ] }
+		}),
 	]
 };
